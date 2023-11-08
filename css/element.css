@@ -2357,3 +2357,15 @@
         left: 208px;
     }
 }
+
+@media (max-width: 480px) {
+    #IMAGE1116>.ladi-image>.ladi-image-background {
+        height: 308.265px;
+    }
+    #FORM657 {
+        left: 29.9605px;
+    }
+    #GROUP1016 {
+        left: 0;
+    }
+}
