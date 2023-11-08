@@ -1,0 +1,28 @@
+
+
+@media (min-width: 768px) {
+    .ladi-section .ladi-container {
+        width: 960px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ladi-section .ladi-container {
+        width: 420px;
+    }
+}
+
+@font-face {
+    font-family: "VWibVuZGVkLVZhcmlhYmxlRmudFZhLnRZg";
+    src: url("https://w.ladicdn.com/5cefbc1ed062e8345a24dfe8/unbounded-variablefont_wght-20230714104805-2fv9_.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "RlMgQXJpcRvbiBCYXNlLmZg";
+    src: url("https://w.ladicdn.com/5cefbc1ed062e8345a24dfe8/fs-ariston-base-20230714105146-ts5vs.otf")
+}
+
+@font-face {
+    font-family: "RlMgQXJpcRvbiBCYXNlLnRZg";
+    src: url("https://w.ladicdn.com/5cefbc1ed062e8345a24dfe8/fs-ariston-base-20230714105259-nhvop.ttf") format("truetype");
+}
