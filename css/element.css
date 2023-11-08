@@ -24,11 +24,7 @@
 #HEADLINE948>.ladi-headline:hover,
 #HEADLINE955>.ladi-headline:hover,
 #HEADLINE1210>.ladi-headline:hover,
-#HEADLINE1211>.ladi-headline:hover,
-#HEADLINE1073>.ladi-headline:hover,
-#HEADLINE1074>.ladi-headline:hover,
-#HEADLINE1212>.ladi-headline:hover,
-#HEADLINE1213>.ladi-headline:hover {
+#HEADLINE1211>.ladi-headline:hover{
     opacity: 1;
 }
 
@@ -86,7 +82,6 @@
 #IMAGE1365>.ladi-image>.ladi-image-background,
 #IMAGE1366>.ladi-image>.ladi-image-background,
 #IMAGE1362>.ladi-image>.ladi-image-background,
-#IMAGE1361,
 #IMAGE1361>.ladi-image>.ladi-image-background,
 #IMAGE1296>.ladi-image>.ladi-image-background,
 #IMAGE1297>.ladi-image>.ladi-image-background,
@@ -98,7 +93,6 @@
 #IMAGE1377>.ladi-image>.ladi-image-background,
 #IMAGE1379>.ladi-image>.ladi-image-background,
 #IMAGE1380>.ladi-image>.ladi-image-background,
-#IMAGE1383>.ladi-image>.ladi-image-background,
 #IMAGE1384>.ladi-image>.ladi-image-background,
 #IMAGE1348>.ladi-image>.ladi-image-background,
 #IMAGE1051>.ladi-image>.ladi-image-background,
@@ -106,11 +100,7 @@
 #IMAGE1053>.ladi-image>.ladi-image-background,
 #IMAGE1300>.ladi-image>.ladi-image-background,
 #IMAGE1301>.ladi-image>.ladi-image-background,
-#IMAGE1305>.ladi-image>.ladi-image-background,
-#IMAGE1260>.ladi-image>.ladi-image-background,
-#IMAGE1306,
-#IMAGE1306>.ladi-image>.ladi-image-background,
-#HEADLINE1212 {
+#IMAGE1305>.ladi-image>.ladi-image-background{
     top: 0px;
     left: 0px;
 }
@@ -222,8 +212,7 @@
 #FORM_ITEM708,
 #HEADLINE1019,
 #HEADLINE1093,
-#HEADLINE1095,
-#HEADLINE1073 {
+#HEADLINE1095{
     top: 0px;
 }
 
@@ -335,30 +324,6 @@
     background-image: url("https://w.ladicdn.com/s600x750/5cefbc1ed062e8345a24dfe8/ldp-robotic-31-1-20230731094034-hmnf6.png");
 }
 
-#GALLERY646>.ladi-gallery>.ladi-gallery-view,
-#GALLERY648>.ladi-gallery>.ladi-gallery-view {
-    height: calc(100% - 0px);
-}
-
-#GALLERY646>.ladi-gallery>.ladi-gallery-control,
-#GALLERY648>.ladi-gallery>.ladi-gallery-control,
-
-#GALLERY646>.ladi-gallery>.ladi-gallery-control,
-#GALLERY648>.ladi-gallery>.ladi-gallery-control {
-    display: none;
-}
-
-#GALLERY646>.ladi-gallery>.ladi-gallery-control>.ladi-gallery-control-box>.ladi-gallery-control-item,
-#GALLERY648>.ladi-gallery>.ladi-gallery-control>.ladi-gallery-control-box>.ladi-gallery-control-item {
-    width: 0px;
-    height: 0px;
-    margin-right: 0px;
-}
-
-#HEADLINE1069{
-    width: 328px;
-}
-
 #IMAGE1335,
 #IMAGE1335>.ladi-image>.ladi-image-background {
     width: 91.0241px;
@@ -378,23 +343,6 @@
 
 #IMAGE1248>.ladi-image>.ladi-image-background {
     background-image: url("../photo/TW.png");
-}
-
-#HEADLINE1069>.ladi-headline {
-    font-family: Exo, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.6;
-    color: rgb(255, 255, 255);
-    text-align: left;
-}
-
-#HEADLINE1070>.ladi-headline {
-    font-family: Exo, sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
-    color: rgb(255, 255, 255);
-    text-align: left;
 }
 
 #IMAGE1365,
@@ -424,20 +372,6 @@
 #IMAGE1361>.ladi-image>.ladi-image-background {
     width: 960px;
     height: 410.256px;
-}
-
-#HEADLINE1069 {
-    top: 213.76px;
-    left: 424px;
-}
-
-#HEADLINE1070 {
-    width: 378px;
-}
-
-#HEADLINE1070 {
-    top: 252.65px;
-    left: 426px;
 }
 
 #IMAGE1361>.ladi-image>.ladi-image-background {
@@ -493,9 +427,7 @@
     text-align: center;
 }
 
-#HEADLINE955>.ladi-headline,
-#HEADLINE1073>.ladi-headline,
-#HEADLINE1212>.ladi-headline {
+#HEADLINE955>.ladi-headline{
     font-family: VWibVuZGVkLVZhcmlhYmxlRmudFZhLnRZg;
     font-weight: bold;
     line-height: 1.6;
@@ -532,97 +464,6 @@
     text-align: left;
 }
 
-#GROUP1029 {
-    height: 577px;
-}
-
-#HEADLINE1073 {
-    width: 820px;
-}
-
-#HEADLINE1074>.ladi-headline {
-    font-style: italic;
-    line-height: 1.4;
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-#GALLERY646 {
-    width: 799px;
-    height: 450px;
-    top: 127px;
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-view-item[data-index="0"] {
-    background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv1-20211217092622.png");
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-control-item[data-index="0"],
-#GALLERY648 .ladi-gallery .ladi-gallery-control-item[data-index="0"] {
-    background-image: url("https://w.ladicdn.com/s400x400/5cefbc1ed062e8345a24dfe8/ld-vtv1-20211217092622.png");
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-view-item[data-index="1"] {
-    background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv2-20211217092740.png");
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-control-item[data-index="1"],
-#GALLERY648 .ladi-gallery .ladi-gallery-control-item[data-index="1"] {
-    background-image: url("https://w.ladicdn.com/s400x400/5cefbc1ed062e8345a24dfe8/ld-vtv2-20211217092740.png");
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-view-item[data-index="2"] {
-    background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv3-20211217092830.png");
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-control-item[data-index="2"],
-#GALLERY648 .ladi-gallery .ladi-gallery-control-item[data-index="2"] {
-    background-image: url("https://w.ladicdn.com/s400x400/5cefbc1ed062e8345a24dfe8/ld-vtv3-20211217092830.png");
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-view-item[data-index="3"] {
-    background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv4-20211220020818.png");
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-control-item[data-index="3"],
-#GALLERY648 .ladi-gallery .ladi-gallery-control-item[data-index="3"] {
-    background-image: url("https://w.ladicdn.com/s400x400/5cefbc1ed062e8345a24dfe8/ld-vtv4-20211220020818.png");
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-view-item[data-index="4"] {
-    background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv5-20211220020953.png");
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-control-item[data-index="4"],
-#GALLERY648 .ladi-gallery .ladi-gallery-control-item[data-index="4"] {
-    background-image: url("https://w.ladicdn.com/s400x400/5cefbc1ed062e8345a24dfe8/ld-vtv5-20211220020953.png");
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-view-item[data-index="5"] {
-    background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv6-20211220021144.png");
-}
-
-#GALLERY646 .ladi-gallery .ladi-gallery-control-item[data-index="5"],
-#GALLERY648 .ladi-gallery .ladi-gallery-control-item[data-index="5"] {
-    background-image: url("https://w.ladicdn.com/s400x400/5cefbc1ed062e8345a24dfe8/ld-vtv6-20211220021144.png");
-}
-
-#IMAGE1306 {
-    width: 420px;
-    height: 346.9px;
-}
-
-#IMAGE1306>.ladi-image>.ladi-image-background {
-    width: 606.886px;
-    height: 452.9px;
-    background-image: url("https://w.ladicdn.com/s950x800/5cefbc1ed062e8345a24dfe8/ldp-robotic-26-1-20230717095908-glynb.png");
-}
-
-#HEADLINE1213>.ladi-headline {
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
 @media (min-width: 768px) {
     #SECTION672 {
         height: 651.4px;
@@ -641,8 +482,6 @@
     #IMAGE1301,
     #IMAGE1305,
     #HEADLINE1210,
-    #HEADLINE1213,
-    #GALLERY648,
     #HEADLINE1270,
     #HEADLINE1271 {
         top: 0px;
@@ -695,10 +534,7 @@
     #IMAGE1301,
     #IMAGE1305,
     #HEADLINE1210,
-    #HEADLINE1211,
-    #SECTION695,
-    #IMAGE1306,
-    #GROUP1060 {
+    #HEADLINE1211{
         display: none !important;
     }
 
@@ -997,10 +833,6 @@
         left: 520px;
     }
 
-    #HEADLINE1073 {
-        left: 0px;
-    }
-
     #IMAGE1122 {
         width: 404.36px;
         height: 280.806px;
@@ -1185,10 +1017,6 @@
         text-align: left;
     }
 
-    #SECTION695 {
-        height: 452.9px;
-    }
-
     #IMAGE1229,
     #IMAGE1229>.ladi-image>.ladi-image-background {
         width: 780.116px;
@@ -1199,10 +1027,6 @@
         background-image: url("https://w.ladicdn.com/s1100x450/5cefbc1ed062e8345a24dfe8/t4-20230717100942-hvyyy.png");
     }
 
-    #HEADLINE1213 {
-        width: 592px;
-    }
-
     #HEADLINE950>.ladi-headline,
     #HEADLINE951>.ladi-headline,
     #HEADLINE953>.ladi-headline {
@@ -1210,13 +1034,8 @@
         font-size: 16px;
     }
 
-    #HEADLINE1074>.ladi-headline {
-        font-family: Exo, sans-serif;
-        font-size: 18px;
-    }
-
     #SECTION689 {
-        height: 2088.25px;
+        height: 3288.25px;
     }
 
     #HEADLINE1060 {
@@ -1301,8 +1120,6 @@
 
     #IMAGE1362,
     #IMAGE1362>.ladi-image>.ladi-image-background,
-    #IMAGE1383,
-    #IMAGE1383>.ladi-image>.ladi-image-background,
     #IMAGE1384,
     #IMAGE1384>.ladi-image>.ladi-image-background {
         width: 162.193px;
@@ -1310,7 +1127,6 @@
     }
 
     #IMAGE1362>.ladi-image>.ladi-image-background,
-    #IMAGE1383>.ladi-image>.ladi-image-background,
     #IMAGE1384>.ladi-image>.ladi-image-background {
         background-image: url("https://w.ladicdn.com/s500x400/5cefbc1ed062e8345a24dfe8/ldp-robotic-35-20230717104235-clk-o.png");
     }
@@ -1415,11 +1231,6 @@
 
     #IMAGE1380 {
         top: 87.1062px;
-    }
-
-    #IMAGE1383 {
-        top: 0px;
-        left: 603.867px;
     }
 
     #IMAGE1382 {
@@ -1570,8 +1381,7 @@
         left: 48px;
     }
 
-    #HEADLINE955>.ladi-headline,
-    #HEADLINE1073>.ladi-headline {
+    #HEADLINE955>.ladi-headline{
         font-size: 30px;
     }
 
@@ -1594,43 +1404,6 @@
         left: -284px;
     }
 
-    #SECTION690 {
-        height: 658.6px;
-    }
-
-    #IMAGE1260 {
-        width: 1604.32px;
-        height: 658.6px;
-        top: 0px;
-        left: -361px;
-    }
-
-    #IMAGE1260>.ladi-image>.ladi-image-background {
-        width: 1604.32px;
-        height: 1197.25px;
-        background-image: url("https://w.ladicdn.com/s1950x1500/5cefbc1ed062e8345a24dfe8/ldp-robotic-26-1-20230717095908-glynb.png");
-    }
-
-    #GROUP1029,
-    #HEADLINE1212 {
-        width: 820px;
-    }
-
-    #GROUP1029 {
-        top: 30.843px;
-        left: 75.038px;
-    }
-
-    #HEADLINE1074 {
-        width: 635px;
-        top: 65px;
-        left: 114px;
-    }
-
-    #GALLERY646 {
-        left: 5.462px;
-    }
-
     #GROUP1076 {
         width: 341px;
         height: 176.5px;
@@ -1638,58 +1411,11 @@
         left: 0px;
     }
 
-    #GROUP1060 {
-        width: 820px;
-        height: 450px;
-        top: 121px;
-        left: 277px;
-    }
-
-    #HEADLINE1212>.ladi-headline {
-        font-size: 35px;
-    }
-
-    #HEADLINE1213>.ladi-headline {
-        font-family: "Open Sans", sans-serif;
-        font-size: 17px;
-        font-style: italic;
-        line-height: 1.4;
-    }
-
-    #GALLERY648 {
-        width: 799px;
-        height: 450px;
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="0"] {
-        background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv1-20211217092622.png");
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="1"] {
-        background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv2-20211217092740.png");
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="2"] {
-        background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv3-20211217092830.png");
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="3"] {
-        background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv4-20211220020818.png");
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="4"] {
-        background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv5-20211220020953.png");
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="5"] {
-        background-image: url("https://w.ladicdn.com/s1100x800/5cefbc1ed062e8345a24dfe8/ld-vtv6-20211220021144.png");
-    }
-
 }
 
 @media (max-width: 767px) {
     #SECTION672 {
-        height: 483.481px;
+        height: 383.481px;
     }
 
     #SECTION672>.ladi-section-background {
@@ -1884,10 +1610,7 @@
     #HEADLINE983,
     #GROUP1083,
     #GROUP1082,
-    #GROUP1084,
-    #SECTION690,
-    #IMAGE1260,
-    #GROUP1029 {
+    #GROUP1084{
         display: none !important;
     }
 
@@ -1916,8 +1639,7 @@
     }
 
     #HEADLINE984,
-    #HEADLINE983,
-    #HEADLINE1213 {
+    #HEADLINE983{
         width: 400px;
     }
 
@@ -2132,8 +1854,7 @@
 
     #HEADLINE1019,
     #HEADLINE1093,
-    #HEADLINE1095,
-    #GALLERY646 {
+    #HEADLINE1095{
         left: 0px;
     }
 
@@ -2192,10 +1913,6 @@
         width: 223px;
     }
 
-    #IMAGE1260>.ladi-image>.ladi-image-background {
-        background-image: url("https://scontent.fsgn4-1.fna.fbcdn.net/v/t1.15752-9/398241242_704495188228614_4702770043782146819_n.png?_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHFBTI05o0ng2qevqi8CEdf7_Jp4dvoqsfv8mnh2-iqx9gJ5Q5xoBKV76vHMZu7twUck7iuVCfg5J1N76jVY8d6&_nc_ohc=f3UkT2_5NeQAX--jQBb&_nc_ht=scontent.fsgn4-1.fna&oh=03_AdQxaxmGR5x55QNFo3zYnFHfdBhO0t4a733ntPZfKrSxRg&oe=657274C3");
-    }
-
     #IMAGE1229,
     #IMAGE1229>.ladi-image>.ladi-image-background {
         width: 400px;
@@ -2207,7 +1924,7 @@
     }
 
     #SECTION689 {
-        height: 1157.51px;
+        height: 1857.51px;
     }
 
     #HEADLINE1060 {
@@ -2220,8 +1937,7 @@
         left: 10px;
     }
 
-    #IMAGE1236,
-    #IMAGE1260 {
+    #IMAGE1236 {
         top: 10px;
         left: 10px;
     }
@@ -2329,8 +2045,6 @@
         top: 618.311px;
     }
 
-    #IMAGE1383,
-    #IMAGE1383>.ladi-image>.ladi-image-background,
     #IMAGE1384,
     #IMAGE1384>.ladi-image>.ladi-image-background {
         width: 98.8346px;
@@ -2419,11 +2133,6 @@
     #IMAGE1380,
     #IMAGE1312 {
         top: 0px;
-    }
-
-    #IMAGE1383 {
-        top: 174.276px;
-        left: 94.893px;
     }
 
     #IMAGE1384 {
@@ -2627,111 +2336,11 @@
         left: 177px;
     }
 
-    #SECTION690 {
-        height: 771.207px;
-    }
-
-    #IMAGE1260 {
-        width: 400px;
-        height: 164.207px;
-    }
-
-    #IMAGE1260>.ladi-image>.ladi-image-background {
-        width: 400px;
-        height: 298.507px;
-    }
-
-    #GROUP1029 {
-        width: 833.5px;
-        top: 184.207px;
-        left: -206.75px;
-    }
-
-    #HEADLINE1073 {
-        left: 13.5px;
-    }
-
-    #HEADLINE1073>.ladi-headline {
-        font-size: 35px;
-    }
-
-    #HEADLINE1074 {
-        width: 592px;
-        top: 69px;
-        left: 127.5px;
-    }
-
-    #HEADLINE1074>.ladi-headline {
-        font-family: "Open Sans", sans-serif;
-        font-size: 17px;
-    }
-
     #GROUP1076 {
         width: 459.5px;
         height: 524.5px;
         top: 1372.87px;
         left: -270.25px;
-    }
-
-    #SECTION695 {
-        height: 325.262px;
-    }
-
-    #GROUP1060 {
-        width: 421px;
-        height: 279.5px;
-        top: 11px;
-        left: 0px;
-    }
-
-    #HEADLINE1212 {
-        width: 421px;
-    }
-
-    #HEADLINE1212>.ladi-headline {
-        font-size: 15px;
-    }
-
-    #HEADLINE1213 {
-        top: 26px;
-        left: 5.334px;
-    }
-
-    #HEADLINE1213>.ladi-headline {
-        font-family: Exo, sans-serif;
-        font-size: 11px;
-        line-height: 1.6;
-    }
-
-    #GALLERY648 {
-        width: 343.584px;
-        height: 217px;
-        top: 62.5px;
-        left: 38.708px;
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="0"] {
-        background-image: url("https://w.ladicdn.com/s650x550/5cefbc1ed062e8345a24dfe8/ld-vtv1-20211217092622.png");
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="1"] {
-        background-image: url("https://w.ladicdn.com/s650x550/5cefbc1ed062e8345a24dfe8/ld-vtv2-20211217092740.png");
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="2"] {
-        background-image: url("https://w.ladicdn.com/s650x550/5cefbc1ed062e8345a24dfe8/ld-vtv3-20211217092830.png");
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="3"] {
-        background-image: url("https://w.ladicdn.com/s650x550/5cefbc1ed062e8345a24dfe8/ld-vtv4-20211220020818.png");
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="4"] {
-        background-image: url("https://w.ladicdn.com/s650x550/5cefbc1ed062e8345a24dfe8/ld-vtv5-20211220020953.png");
-    }
-
-    #GALLERY648 .ladi-gallery .ladi-gallery-view-item[data-index="5"] {
-        background-image: url("https://w.ladicdn.com/s650x550/5cefbc1ed062e8345a24dfe8/ld-vtv6-20211220021144.png");
     }
 
     #HEADLINE1270>.ladi-headline {
