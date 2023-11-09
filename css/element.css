@@ -498,8 +498,8 @@
     }
 
     #IMAGE1085>.ladi-image>.ladi-image-background {
-        background-image: url("../photo/Bìa.png");
-        background-position: 40%;
+        background-image: url("../photo/Bìa.jpg");
+        background-position: left;
     }
 
     #HEADLINE1260 {
@@ -1386,8 +1386,8 @@
     }
 
     #IMAGE1085>.ladi-image>.ladi-image-background {
-        background-image: url("../photo/Bìa.png");
-        background-position: 40%;
+        background-image: url("../photo/Bìa.jpg");
+        background-position:left;
     }
 
     #HEADLINE1260,
