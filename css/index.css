@@ -1515,22 +1515,14 @@ body {
 .footer{
     width: 100%;
     background-color: #284f9e;
+    padding: 25px 0;
 }
 
 .footer-wrap{
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-}
-
-.footer-di{
-    width: 100%;
-    background-color: black;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .dangky{
@@ -1576,7 +1568,8 @@ body {
 
 .footer-logo{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-logo img{
@@ -1611,26 +1604,16 @@ object-position: center;
 }
 
 .footer-lh{
-    height: auto;
-}
-.footer-lh h1{
-    margin: 40px 0;
-    text-align: center;
-    color: white;
-    font-size: calc(1.5rem + 0.3vw);
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
 .footer-lh h2{
     margin-top: 10px;
     color: white;
     font-size: calc(1rem + 0.3vw);
-}
-
-.footer-lh span{
-    margin-top: 10px;
-    color: white;
-    font-size: calc(0.9rem + 0.3vw);
-    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
 }
 
 .footer-ct h1{
