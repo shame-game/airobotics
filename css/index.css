@@ -1528,7 +1528,7 @@ body {
 .dangky{
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    left: 45%;
     z-index: 999;
     animation: d 2s ease infinite;
 }
@@ -1622,7 +1622,11 @@ object-position: center;
     color: white;
     font-size: calc(1.5rem + 0.3vw);
 }
-
+@media (max-width: 992px){
+    .dangky{
+        display: none;
+    }
+}
 @media (max-width: 768px){
     .footer-logo-icon i{
         font-size: calc(2rem + 1vw);
