@@ -1329,11 +1329,11 @@
 
 @media (max-width: 767px) {
     #SECTION672 {
-        height: 383.481px;
+        height: 903.481px;
     }
 
     #SECTION672>.ladi-section-background {
-        background-image: url("../photo/Bìa.png");
+        background-image: url("../photo/bff.jpg");
         background-size: cover;
         background-origin: content-box;
         background-position: 16% 0%;
@@ -2427,11 +2427,73 @@
         width: 100%;
         left: unset;
     }
-    #GROUP1028,#IMAGE1241,#IMAGE1245,#IMAGE1377,#GROUP1086 {
+    #GROUP1028,#IMAGE1241,#IMAGE1245,#IMAGE1377,#GROUP1086{
         left: -35.9272px;
     }
-    #IMAGE1245>.ladi-image>.ladi-image-background,#IMAGE1241>.ladi-image>.ladi-image-background, #IMAGE1238>.ladi-image>.ladi-image-background, #IMAGE1238>.ladi-image>.ladi-image-background,#GROUP1086>.ladi-image>.ladi-image-background {
+    #IMAGE1245>.ladi-image>.ladi-image-background,
+    #IMAGE1241>.ladi-image>.ladi-image-background, 
+    #IMAGE1238>.ladi-image>.ladi-image-background, 
+    #IMAGE1238>.ladi-image>.ladi-image-background,
+    #GROUP1086>.ladi-image>.ladi-image-background,
+    #IMAGE1377>.ladi-image>.ladi-image-background,
+    #IMAGE1380>.ladi-image>.ladi-image-background{
         width: 444.886px;
         height: 182.906px;
+    }
+    #IMAGE1377{
+        left: 31.0728px;
+    }
+    #IMAGE1380{
+       left:  66.0728px;
+    }
+    .kn{
+        width: 90% !important;
+        top: 113px !important;
+    }
+    #SECTION700 {
+        height: 523px;
+    }
+    #IMAGE1348 {
+        height: 500.688px;
+    }
+    #SECTION674>.ladi-container{
+        width: 100%;
+    }
+    #HEADLINE1211 {
+        width: 189px;
+    }
+    #HEADLINE949 h5,
+    #HEADLINE952 h5,
+    #HEADLINE954 h5{
+        font-size: 0.6rem !important;
+    }
+    #IMAGE1301 {
+        left: 220.476px;
+    }
+    #HEADLINE1210 {
+        width: 188px;
+    }
+    #HEADLINE1210 p{
+        text-align: justify !important;
+    }
+    #HEADLINE953 {
+        top: 468.63px;
+        left: 176.5px;
+        width: 188px;
+    }
+    #HEADLINE954 {
+        width: 229px;
+        top: 432.63px;
+        left: 176px
+    }
+    #HEADLINE948 {
+        width: 100%;
+        left: unset;
+    }
+    #SECTION672>.ladi-section-background {
+        background-image: url(../photo/bff.jpg);
+    }
+    #SECTION672 {
+        height: 531.481px;
     }
 }
