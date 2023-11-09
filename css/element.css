@@ -1168,7 +1168,9 @@
     }
 
     #IMAGE1348>.ladi-image>.ladi-image-background {
-        background-image: url("https://scontent.fsgn13-2.fna.fbcdn.net/v/t1.15752-9/363503389_871473747699358_600029915047941213_n.png?_nc_cat=109&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHMX4Vo1jjSmL9VLLy3l_nCK5piZy5iKC0rmmJnLmIoLcAVwWOSxjAG26mgJvk3Ts5v7xAzqU_yddNJdJctticD&_nc_ohc=j_cPs7bVVYMAX881JIM&_nc_ht=scontent.fsgn13-2.fna&oh=03_AdTcTYhKgDF_coqOE2g3QlQluqDLyo4D9HGAV5NZScTAOw&oe=65727C7C");
+        background-image: url("../photo/kn.png");
+        background-position: center;
+        background-size: cover;
     }
 
     #HEADLINE1275 {
@@ -2025,7 +2027,9 @@
     #IMAGE1348>.ladi-image>.ladi-image-background {
         width: 689px;
         height: 584.688px;
-        background-image: url("https://scontent.fsgn13-2.fna.fbcdn.net/v/t1.15752-9/363503389_871473747699358_600029915047941213_n.png?_nc_cat=109&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHMX4Vo1jjSmL9VLLy3l_nCK5piZy5iKC0rmmJnLmIoLcAVwWOSxjAG26mgJvk3Ts5v7xAzqU_yddNJdJctticD&_nc_ohc=j_cPs7bVVYMAX881JIM&_nc_ht=scontent.fsgn13-2.fna&oh=03_AdTcTYhKgDF_coqOE2g3QlQluqDLyo4D9HGAV5NZScTAOw&oe=65727C7C");
+        background-image: url("../photo/kn.png");
+        background-position: center;
+        background-size: cover;
     }
 
     #HEADLINE1275 {
