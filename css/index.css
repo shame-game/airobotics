@@ -1700,13 +1700,13 @@ body {
     }
 
 }
+@media (max-width: 444px){
+    .bao h1{font-size: calc(1rem + 0.5vw);}
+}
 
 #HEADLINE955 {
     width: 100%;
     left: unset !important;
 }
 
-body{
-
-}
 
