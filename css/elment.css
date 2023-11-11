@@ -796,7 +796,11 @@
     color: white;
     font-size: calc(1.5rem + 0.3vw);
 }
-
+@media (max-width: 48em){
+    .footer-logo-icon i {
+        font-size: calc(2rem + 1vw);
+    }
+}
 /* dang ky */ 
 .dangky {
     position: fixed;
