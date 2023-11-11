@@ -298,7 +298,27 @@
         width: 90%;
     }
 }
-@media (max-width: 36em){
+
+@media (max-width: 36.25em)and (max-width:34.4rem){
+    .signal{
+        height: 1300px;
+    }
+    .signal>.signal-bg>.title>h1 {
+        font-size: calc(1rem);
+        padding: 20px 0;
+    }
+    .signal-bg{
+        height: 80px;
+    }
+    .signal .content h1 {
+        font-size: calc(1.3rem);
+    }
+    .signal .content p {
+        font-size: calc(0.7rem + 0.5vw);
+    }
+}
+
+@media (max-width: 34.5em){
     .signal>.signal-bg>.title>h1 {
         font-size: calc(1rem);
         padding: 20px 0;
@@ -316,7 +336,6 @@
         height: 1200px;
     }
 }
-
 
 /* kn6cs */
 .kn6cs {
