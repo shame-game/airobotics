@@ -1,4 +1,7 @@
-document.querySelector('#formsign').onsubmit = (e) =>{
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw80bgt7eB6jiaJv3YgaBJB8QuR7n38XrP6zcHZy3SmjW1VD7qCfErpXUdxwqa64v0Now/exec'
+
+
+document.querySelector('#formsign').onsubmit = (e) => {
     e.preventDefault();
     /* truy cập vào tp html tương ứng */
     let namephoj = document.querySelector('input[name="nameph"]');
@@ -15,35 +18,42 @@ document.querySelector('#formsign').onsubmit = (e) =>{
 
     /**/
     let requioj = document.querySelectorAll('.requi');
-    if(requioj.length>0){
-        requioj.forEach((item)=> {
+    if (requioj.length > 0) {
+        requioj.forEach((item) => {
             item.innerText = '';
         })
     }
     let errors = {};
-    if (nameph.trim()==''){
-        errors['nameph'] = 'Họ tên không được để trống';
+    if (nameph.trim() == '') {
+        errors['nameph'] = '';
         namephoj.parentElement.querySelector('.requi').innerText = errors['nameph']
     }
-    if (phone.trim()==''){
-        errors['phone'] = 'Họ tên không được để trống';
+    if (phone.trim() == '') {
+        errors['phone'] = '';
         phoneoj.parentElement.querySelector('.requi').innerText = errors['phone']
     }
-    if (namehs.trim()==''){
-        errors['namehs'] = 'Họ tên không được để trống';
+    if (namehs.trim() == '') {
+        errors['namehs'] = '';
         namehsoj.parentElement.querySelector('.requi').innerText = errors['namehs']
     }
-    if (age.trim()==''){
-        errors['age'] = 'Họ tên không được để trống';
+    if (age.trim() == '') {
+        errors['age'] = '';
         ageoj.parentElement.querySelector('.requi').innerText = errors['age']
     }
-    if (text.trim()==''){
-        errors['text'] = 'Họ tên không được để trống';
+    if (text.trim() == '') {
+        errors['text'] = '';
         textoj.parentElement.querySelector('.requi').innerText = errors['text']
     }
-    if(Object.keys(errors).length==0){
-        alert('Đăng ký thành công')
-    }else{
-        alert('vui lòng kiểm tra lại thông tin')
+    if (Object.keys(errors).length == 0) {
+        const form = document.forms['contact-form']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Bạn đã đăng ký thành công!"))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error!', error.message))
+        })
+    } else {
+        alert('Vui lòng điều đủ thông tin!')
     }
 }
