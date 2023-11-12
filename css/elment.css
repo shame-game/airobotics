@@ -258,6 +258,12 @@
     padding: 50px 0;
 }
 
+@media (min-width: 101.875em){
+    .signal{
+        height: 900px;
+    }
+}
+
 @media (min-width: 48em) and (max-width: 64em) {
     .signal{
         height: 2300px;

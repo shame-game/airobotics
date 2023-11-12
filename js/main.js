@@ -1,6 +1,5 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbw80bgt7eB6jiaJv3YgaBJB8QuR7n38XrP6zcHZy3SmjW1VD7qCfErpXUdxwqa64v0Now/exec'
 
-
 document.querySelector('#formsign').onsubmit = (e) => {
     e.preventDefault();
     /* truy cập vào tp html tương ứng */
