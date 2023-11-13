@@ -544,7 +544,30 @@
 
 .route>.wrap>.map>.main>img:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
+
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+    z-index: 9999;
+}
+
+.box{
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    bottom: 0;
+    right: 10%;
+    background-color: white;
+    border-radius: 50px;
+    z-index: 99999;
+}
+
 @media (max-width: 36em){
     .route>.title>h1 {
         font-size: calc(1.3rem);
@@ -559,6 +582,16 @@
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+    .box{
+        position: fixed;
+        border-radius: 50px 50px 0 0;
+        top: 10%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: white;
+        z-index: 99999;
     }
 }
 /* reason */

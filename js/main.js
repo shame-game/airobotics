@@ -56,3 +56,24 @@ document.querySelector('#formsign').onsubmit = (e) => {
         alert('Vui lòng kiểm tra lại thông tin!')
     }
 }
+
+const btttt = document.querySelectorAll('.btttt');
+const bg = document.querySelectorAll('.bg');
+const box = document.querySelectorAll('.box');
+
+btttt.forEach((bt, index) => {
+    const bgg = bg[index];
+    const boxx = box[index];
+    bt.onclick = function () {
+        bgg.setAttribute('style', 'display: flex');
+        boxx.setAttribute('style', 'display: flex');
+    }
+});
+
+bg.forEach((btt, index) => {
+    const boxx = box[index];
+    btt.onclick = function () {
+        btt.setAttribute('style', 'display: none');
+        boxx.setAttribute('style', 'display: none');
+    }
+});
