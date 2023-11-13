@@ -90,14 +90,23 @@
             <div class="wrap row">
                 <div class="col-lg-6">
                     <img src="./photo/tg.png">
-                    <img src="./photo/tg.png">
                 </div>
                 <div class="col-lg-6">
-                    <div class="iframe-container" style="width: 100%;height: 100%;">
-                        <iframe style="width: 100%;height: 100%;" class="google-form-iframe"
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSfnkOkZsKt6KAJGnp9jkwEB4PAYN6XHgqI5N8DAqWsmADgHBA/viewform"
-                            frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    <form method="post" id="formsign" name="contact-form" action="https://script.google.com/macros/s/AKfycbw80bgt7eB6jiaJv3YgaBJB8QuR7n38XrP6zcHZy3SmjW1VD7qCfErpXUdxwqa64v0Now/exec">
+                        <div class="msg"></div>
+                        <h1>ĐĂNG KÝ NGAY</h1>
+                        <div class="form"><input type="text" name="nameph" placeholder="Tên phụ huynh"><br>
+                            <span class="requi"></span></div>
+                        <div class="form"><input type="tel" name="phone" placeholder="Số điện thoại"><br>
+                            <span class="requi"></span></div>
+                        <div class="form"><input type="text" name="namehs" placeholder="Tên học sinh"><br>
+                            <span class="requi"></span></div>
+                        <div class="form"><input type="number" name="age" placeholder="Độ tuổi"><br>
+                            <span class="requi"></span></div>
+                        <div class="form"><input type="text" name="text" placeholder="Ghi chú"><br>
+                            <span class="requi"></span></div>
+                        <button type="submit" value="submit" id="submit">Đăng ký</button>
+                    </form>
                 </div>
             </div>
         </div>
