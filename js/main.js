@@ -27,7 +27,7 @@ document.querySelector('#formsign').onsubmit = (e) => {
         errors['nameph'] = '';
         namephoj.parentElement.querySelector('.requi').innerText = errors['nameph']
     }
-    if (phone.trim() == '') {
+    if (phone.length < 7 || phone.length > 11) {
         errors['phone'] = '';
         phoneoj.parentElement.querySelector('.requi').innerText = errors['phone']
     }
@@ -35,7 +35,7 @@ document.querySelector('#formsign').onsubmit = (e) => {
         errors['namehs'] = '';
         namehsoj.parentElement.querySelector('.requi').innerText = errors['namehs']
     }
-    if (age.trim() == '') {
+    if (age < 0) {
         errors['age'] = '';
         ageoj.parentElement.querySelector('.requi').innerText = errors['age']
     }
@@ -52,7 +52,7 @@ document.querySelector('#formsign').onsubmit = (e) => {
                 .then(() => { window.location.reload(); })
                 .catch(error => console.error('Error!', error.message))
         })
-    } else {
-        alert('Vui lòng điều đủ thông tin!')
+    } else{
+        alert('Vui lòng kiểm tra lại thông tin!')
     }
 }
