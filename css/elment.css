@@ -909,7 +909,7 @@
     width: 100%;
     object-fit: cover;
     object-position: bottom;
-    filter: brightness(90%);
+    filter: brightness(95%);
     transform: scale(1);
     transition: all 0.3s ease-in-out;
 }
@@ -944,7 +944,7 @@
 }
 
 .bao-lg .bao-img a:hover>.bao-card-img img {
-    filter: brightness(95%);
+    filter: brightness(99%);
     transform: scale(1.05);
 }
 
