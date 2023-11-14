@@ -821,6 +821,17 @@
 
 /* bao */
 
+.bao-text{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+.bao-text h2{
+    margin: 20px 0;
+    color: #1565c0;
+    font-size: calc(1rem + 1vw);
+}
+
 .bao {
     width: 100%;
     display: flex;
@@ -862,7 +873,7 @@
 .bao-sm .bao-img img {
     width: 80%;
     object-fit: cover;
-    object-position: 0px;
+    object-position: top;
 }
 .bao-lg .bao-img {
     width: 33%;
@@ -984,6 +995,9 @@
     .bao-lg {
         display: none;
     }
+    .bao-text{
+        justify-content: center;
+    }
 }
 
 @media (max-width: 48em) {
@@ -994,7 +1008,9 @@
     .bao-sm {
         display: block;
     }
-
+    .bao-text{
+        justify-content: center;
+    }
     .bao-lg {
         display: none;
     }
