@@ -691,6 +691,8 @@
 
 .carou-ai img{
     margin: 0 10px;
+    object-fit: cover;
+    object-position: center;
 }
 .sp-lg{
     display: flex !important;
@@ -800,14 +802,14 @@
     }
     .carou-aiz{
         width: 100%;
-        height: 300px;
+        height: 350px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .carou-ai{
         width: 100%;
-        height: 300px;
+        height: 350px;
         display: flex;
         justify-content: center;
         align-items: center;

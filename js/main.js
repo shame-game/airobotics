@@ -5,9 +5,6 @@ const bg = document.querySelectorAll('.bg');
 const box = document.querySelectorAll('.box');
 const clost = document.querySelectorAll('.clost')
 
-console.log(box);
-console.log(clost)
-
 btttt.forEach((bt, index) => {
     const bgg = bg[index];
     const boxx = box[index];
