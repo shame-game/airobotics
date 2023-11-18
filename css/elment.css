@@ -692,6 +692,12 @@
 .carou-ai img{
     margin: 0 10px;
 }
+.sp-lg{
+    display: flex !important;
+}
+.sp-sm{
+    display: none !important;
+}
 
 @media (min-width: 48em) and (max-width: 64em) {
     .box {
@@ -711,11 +717,47 @@
     .pr{
         left: unset !important;
     }
+    .route-th h1{
+        font-size: calc(0.6rem + 0.5vw);
+        padding: 0 30px;
+        margin: 0;
+        color: white;
+    }
 }
-
+@media (max-width: 48em){
+    .route-th h1{
+        font-size: calc(0.7rem);
+        padding: 0 30px;
+        margin: 0;
+        color: white;
+    }
+    .box {
+        position: fixed;
+        border-radius: 50px 50px 0 0;
+        top: 10%;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0);
+        z-index: 99999;
+        bottom: unset;
+        height: max-content;
+    }
+    .ne{
+        left: unset !important;
+    }
+    .pr{
+        right: unset;
+    }
+}
 @media (max-width: 36em) {
     .route>.title>h1 {
         font-size: calc(1.3rem);
+    }
+    .route-th h1{
+        font-size: calc(0.7rem);
+        padding: 0 30px;
+        margin: 0;
+        color: white;
     }
 
     .route>.wrap>.map>h1 {
@@ -730,6 +772,13 @@
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+
+    .sp-sm{
+        display: flex !important;
+    }
+    .sp-lg{
+        display: none !important;
     }
 
     .box {
