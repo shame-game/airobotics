@@ -49,6 +49,9 @@ const d9 = document.querySelector('.d9');
 const d10 = document.querySelector('.d10');
 const d11 = document.querySelector('.d11');
 const d12 = document.querySelector('.d12');
+const d13 = document.querySelector('.d13');
+const d14 = document.querySelector('.d14');
+const d15 = document.querySelector('.d15');
 const x1 = document.querySelector('.x1');
 const x2 = document.querySelector('.x2');
 const x3 = document.querySelector('.x3');
@@ -69,6 +72,9 @@ g1.addEventListener('click', ()=>{
     d10.setAttribute('style', 'display: none')
     d11.setAttribute('style', 'display: none')
     d12.setAttribute('style', 'display: none')
+    d13.setAttribute('style', 'display: none')
+    d14.setAttribute('style', 'display: none')
+    d15.setAttribute('style', 'display: none')
     x1.setAttribute('style', 'transform: rotate(90deg)')
     x2.setAttribute('style', 'transform: rotate(0deg)')
     x3.setAttribute('style', 'transform: rotate(0deg)')
@@ -86,6 +92,9 @@ g2.addEventListener('click', ()=>{
     d10.setAttribute('style', 'display: none')
     d11.setAttribute('style', 'display: none')
     d12.setAttribute('style', 'display: none')
+    d13.setAttribute('style', 'display: none')
+    d14.setAttribute('style', 'display: none')
+    d15.setAttribute('style', 'display: none')
     x1.setAttribute('style', 'transform: rotate(0deg)')
     x2.setAttribute('style', 'transform: rotate(90deg)')
     x3.setAttribute('style', 'transform: rotate(0deg)')
@@ -103,6 +112,9 @@ g3.addEventListener('click', ()=>{
     d10.setAttribute('style', 'display: flex')
     d11.setAttribute('style', 'display: flex')
     d12.setAttribute('style', 'display: flex')
+    d13.setAttribute('style', 'display: flex')
+    d14.setAttribute('style', 'display: flex')
+    d15.setAttribute('style', 'display: flex')
     x1.setAttribute('style', 'transform: rotate(0deg)')
     x2.setAttribute('style', 'transform: rotate(0deg)')
     x3.setAttribute('style', 'transform: rotate(90deg)')
