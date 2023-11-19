@@ -594,20 +594,18 @@
     height: 50px;
     width: 100%;
     transition: all 0.4s ease;
-    margin: 10px 0;
+    margin: 10px 0 !important;
+    font-size: calc(1rem + 0.5vw);
+    padding: 0 30px;
+    margin: 0;
+    color: white !important;
+    text-decoration: none;
 }
 
 .route-th:hover{
     transform: scale(1.01);
 }
 
-.route-th a{
-    font-size: calc(1rem + 0.5vw);
-    padding: 0 30px;
-    margin: 0;
-    color: white;
-    text-decoration: none;
-}
 .route-th i{
     padding: 0 30px;
     color: white;
