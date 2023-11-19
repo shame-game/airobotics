@@ -601,11 +601,12 @@
     transform: scale(1.01);
 }
 
-.route-th h1{
+.route-th a{
     font-size: calc(1rem + 0.5vw);
     padding: 0 30px;
     margin: 0;
     color: white;
+    text-decoration: none;
 }
 .route-th i{
     padding: 0 30px;
