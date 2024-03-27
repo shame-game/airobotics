@@ -217,6 +217,25 @@
     <script src="https://cdn.statically.io/gh/tr1nh/fetch-sheet.js/master/fetch-sheet.min.js"></script>
     <!-- Main Js -->
     <script src="./staric/index.js"></script>
+    <script>
+        fetchSheet
+            .fetch({
+                gSheetId: '1plKqnrY1pN9qsBxIXOMi8qTFBx9deeV2vaLQZ_QORd0',
+                wSheetName: 'Tổng hợp học sinh',
+            })
+            .then((rows) => {
+                var vamg = window.location.href;
+                var fileName = vamg.substring(vamg.lastIndexOf('/') + 1);
+                rows.forEach((t) => {
+                    if (t['mã Profile'] + '.html' == fileName) {
+                        Loadcontent(t['mã dữ liệu'])
+                    }
+                })
+            });
+
+    </script>
+
+
 </body>
 
 </html>
