@@ -15,8 +15,8 @@
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Css style -->
-    <link rel="stylesheet" href="./staric/index.css">
-    <link rel="stylesheet" href="./staric/loadweb.css">
+    <link rel="stylesheet" href="../staric/index.css">
+    <link rel="stylesheet" href="../staric/loadweb.css">
 </head>
 
 <body>
@@ -128,7 +128,7 @@
                         </div>
                         <div class="d551412a3__right col-lg-6">
                             <div class="d551412a3-left-img">
-                                <img src="./staric/Image/Profiling-amico.png" class="indetro">
+                                <img src="../staric/Image/Profiling-amico.png" class="indetro">
                             </div>
                         </div>
                     </div>
@@ -216,26 +216,10 @@
     <!-- Fetch-sheet-->
     <script src="https://cdn.statically.io/gh/tr1nh/fetch-sheet.js/master/fetch-sheet.min.js"></script>
     <!-- Main Js -->
-    <script src="./staric/index.js"></script>
+    <script src="../staric/index.js"></script>
     <script>
-        fetchSheet
-            .fetch({
-                gSheetId: '1plKqnrY1pN9qsBxIXOMi8qTFBx9deeV2vaLQZ_QORd0',
-                wSheetName: 'Tổng hợp học sinh',
-            })
-            .then((rows) => {
-                var vamg = window.location.href;
-                var fileName = vamg.substring(vamg.lastIndexOf('/') + 1);
-                rows.forEach((t) => {
-                    if (t['mã Profile'] + '.html' == fileName) {
-                        Loadcontent(t['mã dữ liệu'])
-                    }
-                })
-            });
-
+        Loadcontent('1PSH7r72jilSdJeETpjnBAEv7YIKE1ftZkmLH8dniEmA')
     </script>
-
-
 </body>
 
 </html>
