@@ -11,7 +11,7 @@ btttt.forEach((bt, index) => {
     bt.onclick = function () {
         bgg.setAttribute('style', 'display: flex');
         boxx.setAttribute('style', 'display: flex');
-        document.querySelector('body').setAttribute('style','overflow: hidden;')
+        document.querySelector('body').setAttribute('style', 'overflow: hidden;')
     }
 });
 
@@ -20,7 +20,7 @@ bg.forEach((btt, index) => {
     btt.onclick = function () {
         btt.setAttribute('style', 'display: none');
         boxx.setAttribute('style', 'display: none');
-        document.querySelector('body').setAttribute('style','overflow: auto;')
+        document.querySelector('body').setAttribute('style', 'overflow: auto;')
     }
 });
 
@@ -29,8 +29,8 @@ clost.forEach((bttt, index) => {
     const boxxx = box[index];
     bttt.onclick = function () {
         boxxx.setAttribute('style', 'display: none');
-        bggg.setAttribute('style','display: none');
-        document.querySelector('body').setAttribute('style','overflow: auto;')
+        bggg.setAttribute('style', 'display: none');
+        document.querySelector('body').setAttribute('style', 'overflow: auto;')
     }
 });
 
@@ -59,7 +59,7 @@ const x3 = document.querySelector('.x3');
 
 
 
-g1.addEventListener('click', ()=>{
+g1.addEventListener('click', () => {
     d1.setAttribute('style', 'display: flex')
     d2.setAttribute('style', 'display: flex')
     d3.setAttribute('style', 'display: flex')
@@ -79,7 +79,7 @@ g1.addEventListener('click', ()=>{
     x2.setAttribute('style', 'transform: rotate(0deg)')
     x3.setAttribute('style', 'transform: rotate(0deg)')
 })
-g2.addEventListener('click', ()=>{
+g2.addEventListener('click', () => {
     d1.setAttribute('style', 'display: none')
     d2.setAttribute('style', 'display: none')
     d3.setAttribute('style', 'display: none')
@@ -99,7 +99,7 @@ g2.addEventListener('click', ()=>{
     x2.setAttribute('style', 'transform: rotate(90deg)')
     x3.setAttribute('style', 'transform: rotate(0deg)')
 })
-g3.addEventListener('click', ()=>{
+g3.addEventListener('click', () => {
     d1.setAttribute('style', 'display: none')
     d2.setAttribute('style', 'display: none')
     d3.setAttribute('style', 'display: none')
@@ -119,3 +119,119 @@ g3.addEventListener('click', ()=>{
     x2.setAttribute('style', 'transform: rotate(0deg)')
     x3.setAttribute('style', 'transform: rotate(90deg)')
 })
+
+fetchSheet
+    .fetch({
+        gSheetId: '1sfm3I2VT4byXlqFSCgYMRMNHNda7ozBwsGdDG8HqZ5A',
+        wSheetName: 'video',
+    })
+    .then((rows) => {
+        let items = '';
+        rows.forEach((t) => {
+            items +=
+                `<div style="padding: 10px">
+                    <div class="bao-img">
+                        <a target="_blank" href="${t['Link_Video']}">
+                            <div class="bao-card-img"><img src="${t['Hình ảnh_Video']}"></div>
+                            <div class="bao-card-content">
+                                <h2>${t['Tiêu đề_Video']}</h2>
+                                <div style="display: flex; height: max-content;justify-content: space-between;align-items: center;margin: 20px 0;">
+                                    <img src="${t['Hình logo_Báo']}" width="100px" height="auto" style="object-fit: cover;height: 30px;
+                                    width: max-content;">
+                                        <h3>Xem Thêm</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>`
+        })
+        document.querySelector('#video-sheet').innerHTML = items;
+        $('#video-sheet').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            pauseOnHover: false,
+            prevArrow: '<span class="prev"><i class="bi-chevrond-left"></i></span>',
+            nextArrow: '<span class="next"><i class="bi-chevrond-right"></i></span>',
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        prevArrow: '',
+                        nextArrow: '',
+                        arrows: false,
+                        dots: true,
+                    },
+                },
+                {
+                    breakpoint: 1000,
+                    settings: {
+                        slidesToShow: 1,
+                        dots: true,
+                        arrows: false,
+                    },
+                }
+            ]
+        });
+    });
+
+fetchSheet
+    .fetch({
+        gSheetId: '1sfm3I2VT4byXlqFSCgYMRMNHNda7ozBwsGdDG8HqZ5A',
+        wSheetName: 'báo',
+    })
+    .then((rows) => {
+        let items = '';
+        rows.forEach((t) => {
+            items +=
+                `<div style="padding: 10px">
+                    <div class="bao-img">
+                        <a target="_blank" href="${t['Link_Báo']}">
+                            <div class="bao-card-img"><img src="${t['Hình ảnh_Báo']}"></div>
+                            <div class="bao-card-content">
+                                <h2>${t['Tiêu đề_Báo']}</h2>
+                                <div style="display: flex; height: max-content;justify-content: space-between;align-items: center;margin: 20px 0;">
+                                    <img src="${t['Hình logo_Báo']}" width="100px" height="auto" style="object-fit: cover;height: 30px;
+                                    width: max-content;">
+                                        <h3>Xem Thêm</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>`
+        })
+        document.querySelector('#bao_sheet').innerHTML = items;
+        $('#bao_sheet').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            pauseOnHover: false,
+            prevArrow: '<span class="prev"><i class="bi-chevrond-left"></i></span>',
+            nextArrow: '<span class="next"><i class="bi-chevrond-right"></i></span>',
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        prevArrow: '',
+                        nextArrow: '',
+                        arrows: false,
+                        dots: true,
+                    },
+                },
+                {
+                    breakpoint: 1000,
+                    settings: {
+                        slidesToShow: 1,
+                        dots: true,
+                        arrows: false,
+                    },
+                }
+            ]
+        });
+    });

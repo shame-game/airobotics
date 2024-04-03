@@ -1,5 +1,5 @@
-:root{
-    -air-main: #284f9e;
+:root {
+    --air-main: #284f9e;
 }
 
 html {
@@ -8,7 +8,7 @@ html {
     line-height: 1.5
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -16,7 +16,7 @@ body {
     margin: 0
 }
 
-.main{
+.main {
     background-color: white !important;
 }
 
@@ -24,7 +24,39 @@ body {
     font-family: Neue Montreal;
     font-style: normal;
     font-weight: 500;
-    src: url(../fonts/NeueMontreal-Medium.woff2) format("woff2"),url(../fonts/NeueMontreal-Medium.woff) format("woff")
+    src: url(../fonts/NeueMontreal-Medium.woff2) format("woff2"), url(../fonts/NeueMontreal-Medium.woff) format("woff")
+}
+
+.bi-chevrond-left::before {
+    color: var(--air-main);
+    font-size: 50px;
+    position: absolute;
+    bottom: 45%;
+    left: -100px;
+    width: 50px;
+    height: 50px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.bi-chevrond-left::before {
+    content: "\f284";
+}
+
+.bi-chevrond-right::before {
+    color: var(--air-main);
+    font-size: 50px;
+    position: absolute;
+    bottom: 45%;
+    right: -100px;
+    width: 50px;
+    height: 50px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.bi-chevrond-right::before {
+    content: "\f285";
 }
 
 .has-scroll-smooth body {
@@ -42,7 +74,7 @@ body {
     right: 0;
     top: 0;
     transform-origin: center right;
-    transition: transform .3s,opacity .3s;
+    transition: transform .3s, opacity .3s;
     width: 11px
 }
 
@@ -50,7 +82,9 @@ body {
     transform: scaleX(1.45)
 }
 
-.c-scrollbar:hover,.has-scroll-dragging .c-scrollbar,.has-scroll-scrolling .c-scrollbar {
+.c-scrollbar:hover,
+.has-scroll-dragging .c-scrollbar,
+.has-scroll-scrolling .c-scrollbar {
     opacity: 1
 }
 
