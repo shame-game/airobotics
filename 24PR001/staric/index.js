@@ -1,4 +1,4 @@
-function Loadcontent(url) {
+function Loadcontent(url, en) {
     const vam = document.querySelector.bind(document);
     const vams = document.querySelectorAll.bind(document);
     const w = screen.width
@@ -101,6 +101,7 @@ function Loadcontent(url) {
             wSheetName: 'Khoahoc',
         })
         .then((rows) => {
+
             let gut = []
             rows.forEach((t) => {
                 if (gut[t['TenKH']]) {
@@ -117,7 +118,7 @@ function Loadcontent(url) {
                 Pro_wrap +=
                     `<div class="main-content" index='${key}'>
                     <div class="d551412a2-right__ctTi">
-                        ${key} (${gut[key]} Chủ đề đã học)
+                        ${key} (${gut[key]} ${en})
                         <div class="d55svg" >
                             <svg xmlns="http://www.w3.org/2000/svg" height="24"
                                 viewBox="0 0 24 24" width="24" fill="#606368">

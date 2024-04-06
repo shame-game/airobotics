@@ -30,6 +30,10 @@
             <a class="template" href="#d551412a2">khóa học đã học</a>
             <a class="create" href="#d551412a3">Kỹ năng</a>
             <a class="contact" href="#tongquan">Tổng quát</a>
+            <select id="lang" class="form-select" aria-label="Default select example" onchange="fenderChanged(this)">
+                <option value="vn">VN</option>
+                <option value="en">EN</option>
+            </select>
         </div>
     </div>
     <div class="loadweb">
@@ -51,6 +55,11 @@
                     <a class="template" href="#d551412a2">khóa học đã học</a>
                     <a class="create" href="#d551412a3">Kỹ năng</a>
                     <a class="contact" href="#tongquan">Tổng quát</a>
+                    <select id="langf" class="form-select" aria-label="Default select example"
+                        onchange="genderChanged(this)">
+                        <option value="vn">VN</option>
+                        <option value="en">EN</option>
+                    </select>
                 </ul>
             </div>
         </section>
@@ -142,7 +151,8 @@
                     </div>
                     <div class="tongquan_content col-lg-6">
                         <div class="tongquan_text">
-                            <h1 class="Title__main" style="color: var(--color-text);font-weight: 400;">Báo cáo tổng quát
+                            <h1 class="Title__main baocaoen" style="color: var(--color-text);font-weight: 400;">Báo cáo
+                                tổng quát
                             </h1>
                             <p id="contentbctq"></p>
                         </div>
@@ -218,7 +228,23 @@
     <!-- Main Js -->
     <script src="../staric/index.js"></script>
     <script>
-        Loadcontent('1ZQSH5SOPGd9NPW0GxwyrtpPq8EhDZrkRS-0S7958i9g')
+        Loadcontent('1ZQSH5SOPGd9NPW0GxwyrtpPq8EhDZrkRS-0S7958i9g', 'Chủ đề đã học')
+        function fenderChanged() {
+            if (document.querySelector('#lang').value == 'vn') {
+                window.location = './index.html'
+            }
+            if (document.querySelector('#lang').value == 'en') {
+                window.location = './en.html'
+            }
+        }
+        function genderChanged() {
+            if (document.querySelector('#langf').value == 'vn') {
+                window.location = './index.html'
+            }
+            if (document.querySelector('#langf').value == 'en') {
+                window.location = './en.html'
+            }
+        }
     </script>
 </body>
 
