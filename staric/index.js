@@ -6,7 +6,7 @@ function Loadcontent(url, en) {
         `<div class="intro">
         <div class="intrologo">
             <div class="intrologo-hiden">
-                <img style="width:30%" src="../staric/Image/Logo.png">
+                <img style="width:30%" src="../../staric/Image/Logo.png">
             </div>
         </div>
         <div class="introone"></div>
@@ -286,9 +286,9 @@ function Loadcontent(url, en) {
             let i = 1;
             rows.forEach((tab) => {
                 if (tab['Đã học'] == 'TRUE') {
-                    link = `../staric/Image/LV${i}.png`
+                    link = `../../staric/Image/LV${i}.png`
                 } else {
-                    link = `../staric/Image/log_LV${i}.png`
+                    link = `../../staric/Image/log_LV${i}.png`
                 }
                 t +=
                     `<div class="banner-wrap__img col-lg-4">
