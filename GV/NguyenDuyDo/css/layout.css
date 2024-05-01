@@ -742,7 +742,7 @@ header .menu-btn span:after {
 
 .cd-timeline .cd-timeline-block:nth-child(even) .cd-timeline-content .date {
 	right: auto;
-	left: -154px;
+	left: -163px;
 }
 
 .cd-timeline .cd-timeline-block:nth-child(even) .cd-timeline-content .date:before {
@@ -848,7 +848,7 @@ header .menu-btn span:after {
 	margin: 0;
 	position: absolute;
 	top: 13px;
-	right: -154px;
+	right: -190px;
 }
 
 .cd-timeline .cd-timeline-block .cd-timeline-content .date:before {
