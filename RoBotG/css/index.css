@@ -107,6 +107,9 @@ body {
     border-radius: 8px;
     transition: all .3s linear;
     cursor: pointer;
+    text-transform: none;
+    display: flex;
+    align-items: center;
 }
 
 @keyframes vam_ani {
@@ -1050,6 +1053,10 @@ body {
 #footer p {
     margin: 10px 0;
     text-align: justify;
+}
+
+#footer h2 {
+    font-size: 28px;
 }
 
 
