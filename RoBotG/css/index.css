@@ -848,6 +848,10 @@ body {
         display: block;
     }
 
+    .sign-in {
+        width: 100%;
+    }
+
     .form-container {
         position: unset;
     }
