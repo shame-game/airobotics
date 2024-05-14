@@ -3,17 +3,31 @@ const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
 
-registerBtn.addEventListener('click', () => {
-    container.classList.add("active");
-    document.querySelector('.sign-in').setAttribute('style', 'display:none')
-    document.querySelector('.toggle').setAttribute('style', 'left: -125%;')
-});
+let w = screen.width
+console.log(w);
+if (w > 992) {
+    registerBtn.addEventListener('click', () => {
+        container.classList.add("active");
+        document.querySelector('.sign-in').setAttribute('style', 'display:none')
+    });
 
-loginBtn.addEventListener('click', () => {
-    container.classList.remove("active");
-    document.querySelector('.sign-in').setAttribute('style', 'display:unset')
-    document.querySelector('.toggle').setAttribute('style', 'left: -150%;')
-});
+    loginBtn.addEventListener('click', () => {
+        container.classList.remove("active");
+        document.querySelector('.sign-in').setAttribute('style', 'display:unset')
+    });
+} else {
+    registerBtn.addEventListener('click', () => {
+        container.classList.add("active");
+        document.querySelector('.sign-in').setAttribute('style', 'display:none')
+        document.querySelector('.toggle').setAttribute('style', 'left: -125%;')
+    });
+
+    loginBtn.addEventListener('click', () => {
+        container.classList.remove("active");
+        document.querySelector('.sign-in').setAttribute('style', 'display:unset')
+        document.querySelector('.toggle').setAttribute('style', 'left: -150%;')
+    });
+}
 
 
 

@@ -604,6 +604,7 @@ body {
 .containers button.hiddens {
     background-color: transparent;
     border-color: #fff;
+    font-family: "Questrial", sans-serif !important;
 }
 
 
@@ -1075,8 +1076,6 @@ body {
     justify-content: space-between;
     gap: 16px;
 }
-
-@media (max-width:992px) {}
 
 /*time */
 .time_clock {
