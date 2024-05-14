@@ -6,11 +6,13 @@ const loginBtn = document.getElementById('login');
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
     document.querySelector('.sign-in').setAttribute('style', 'display:none')
+    document.querySelector('.toggle').setAttribute('style', 'left: -125%;')
 });
 
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
     document.querySelector('.sign-in').setAttribute('style', 'display:unset')
+    document.querySelector('.toggle').setAttribute('style', 'left: -150%;')
 });
 
 
@@ -181,7 +183,7 @@ fetchSheet
         document.querySelector('#organizational_titlep').innerText = rows[0]['Tiêu đề phụ']
         let r = ''
         rows.forEach((t) => {
-            r += `<p class="vam_content">${t['Nội dung']}</p>`
+            r += `<p style="text-indent: 10%;" class="vam_content">${t['Nội dung']}</p>`
         })
         document.querySelector('#organizational_content1').innerHTML += r
     });
@@ -200,31 +202,31 @@ fetchSheet
         rows.forEach((tab) => {
             if (tab['Hình ảnh logo đơn vị chỉ đạo'] != '') {
                 r +=
-                    `<div style="width:16%;display:flex;justify-content: center;align-items: center;">
+                    `<div class="donvi_load-wrap">
                     <img style="width:80%" src="${tab['Hình ảnh logo đơn vị chỉ đạo']}"/>
                 </div>`
             }
             if (tab['Hình ảnh logo đơn vị đồng hành'] != '') {
                 t +=
-                    `<div style="width:16%;display:flex;justify-content: center;align-items: center;">
+                    `<div class="donvi_load-wrap">
                     <img style="width:80%" src="${tab['Hình ảnh logo đơn vị đồng hành']}"/>
                 </div>`
             }
             if (tab['Hình ảnh logo đơn vị đồng tổ chức'] != '') {
                 y +=
-                    `<div style="width:16%;display:flex;justify-content: center;align-items: center;">
+                    `<div class="donvi_load-wrap">
                     <img style="width:80%" src="${tab['Hình ảnh logo đơn vị đồng tổ chức']}"/>
                 </div>`
             }
             if (tab['Hình ảnh logo đơn vị truyền thông'] != '') {
                 u +=
-                    `<div style="width:16%;display:flex;justify-content: center;align-items: center;">
+                    `<div class="donvi_load-wrap">
                     <img style="width:80%" src="${tab['Hình ảnh logo đơn vị truyền thông']}"/>
                 </div>`
             }
             if (tab['Hình ảnh logo đơn vị tổ chức'] != '') {
                 i +=
-                    `<div style="width:16%;display:flex;justify-content: center;align-items: center;">
+                    `<div class="donvi_load-wrap">
                     <img style="width:80%" src="${tab['Hình ảnh logo đơn vị tổ chức']}"/>
                 </div>`
             }

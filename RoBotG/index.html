@@ -10,8 +10,7 @@
     <!-- Front text-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Questrial&display=swap"
         rel="stylesheet">
 
 
@@ -59,7 +58,8 @@
                 <img style="width: 70%;" id="intro_logo">
                 <h3 style="margin-top: 16px;" class="vam_title" id="intro_title"></h3>
                 <p style="width: 100%;margin: 16px 0;" class="vam_content" id="intro_content"></p>
-                <button class="vam_button" id="intro_link" style="margin-top: 16px;">Tham gia ngay</button>
+                <button class="vam_button" id="intro_link" style="margin-top: 16px;"><a href="">Tham gia
+                        ngay</a></button>
             </div>
         </div>
     </section>
@@ -112,7 +112,7 @@
             </div>
             <h4 class="vam_title1" id="object_title">
             </h4>
-            <div class="vam_wrap2" style="display: flex;justify-content: space-between;height: 100%;">
+            <div class="vam_wrap2 object_img-wrap">
                 <div class="object">
                     <div class="object_wrapimg">
                         <img src="https://lh3.googleusercontent.com/d/1VC4skimthlKeOb9cdGtRhqh8zgeqFo9H">
@@ -131,7 +131,7 @@
             </div>
         </div>
 
-        <div class="vam_wrap2" style="display: flex;justify-content: space-between;height: 100%;">
+        <div class="vam_wrap2 object_content-wrap">
             <div class="object">
                 <div class="object_wrapcontent">
                     <p id="object_content1" class="vam_content"></p>
@@ -163,12 +163,12 @@
             <h1 class="vam_title1" style="padding-bottom: 50px ;text-align: center;" id="organizational_title">
             </h1>
         </div>
-        <div class="vam_wrap2" style="display: flex;position: relative;">
+        <div class="vam_wrap2 repo" style="display: flex;position: relative;">
             <div id="organizational_img1" style="flex: 1;"><img
                     src="https://hoanghamobile.com/tin-tuc/wp-content/webp-express/webp-images/uploads/2023/08/ve-ban-do-viet-nam-thump.jpg.webp"
                     style="width: 95%;aspect-ratio: 1/1;object-fit: cover;border-radius: 16px;position: relative;z-index: 2;">
             </div>
-            <div style="flex: 1;">
+            <div class="organizational_content" style="flex: 1;">
                 <h4 style="margin-bottom: 16px;margin-left: 30px;" id="organizational_titlep"></h4>
                 <div id="organizational_content1">
                 </div>
@@ -217,15 +217,14 @@
     </div>
     <section id="timeline" style="overflow: hidden;padding-bottom: 130px;">
 
-        <div id="timeline_load">
-            <div style="display: flex;justify-content: center;">
-                <span class="vam_titleup1">Thời gian và sự kiện</span>
-            </div>
-            <h3 class="vam_title1"
-                style="padding-bottom: 50px;color: white;background: none;-webkit-text-fill-color:unset;text-align: center;"
-                id="timeline_title">Thư viện hình ảnh
-            </h3>
+
+        <div style="display: flex;justify-content: center;">
+            <span class="vam_titleup1">Thời gian và sự kiện</span>
         </div>
+        <h3 class="vam_title1"
+            style="padding-bottom: 50px;color: white;background: none;-webkit-text-fill-color:unset;text-align: center;"
+            id="timeline_title">Thư viện hình ảnh
+        </h3>
 
         <div style="width: 100%;overflow: hidden;;padding: 50px ;" id="scrool_x">
             <div id="timeline_list-wrap" style="position: relative;">
@@ -236,11 +235,7 @@
     <section id="prize" style="padding: 50px 0;background-image: linear-gradient(180deg,#ecfafe,#c0a5e3);">
         <div class="vam_wrap2">
             <div style="display: flex;justify-content: center;">
-                <span style="background-image: -webkit-linear-gradient(top, hsl(319.02deg 68.97% 45.49% / 32%), rgb(198 35 146 / 18%), hsl(0deg 0% 100% / 0%));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                position: relative;
-                font-size: 56px;">Cơ cấu giải thưởng</span>
+                <span class="vam_titleup2">Cơ cấu giải thưởng</span>
             </div>
             <h1 class="vam_title" style="padding-bottom: 50px ;text-align: center;" id="prize_title">Cơ cấu giải thưởng
             </h1>
@@ -250,25 +245,17 @@
                 <div class="form-container sign-up">
                     <form>
                         <h1><i id="bac" class="bi bi-trophy-fill"></i> Vòng chung kết</h1>
-                        <div class="social-icons">
-                            <a href="#" class="icon"><i style="color: #d5d522;" class="bi bi-award-fill"></i> 03 giải
-                                nhất (mỗi bảng 01 giải):
-                                mỗi giải 30.000.000 VNĐ và quà
-                                tặng từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i style="color: #c8c8c0;" class="bi bi-award-fill"></i> 03 giải
-                                nhì (mỗi bảng 01 giải):
-                                mỗi giải 10.000.000 VNĐ và quà tặng
-                                từ BTC và nhà tài trợ </a>
-                            <a href="#" class="icon"><i style="color: #ba740a;" class="bi bi-award-fill"></i> 06 giải ba
-                                (mỗi bảng 02 giải): mỗi
-                                giải 2.000.000 VNĐ và quà tặng
-                                từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i class="bi bi-award-fill"></i> 06 giải khuyến khích (mỗi bảng 02
-                                giải): mỗi giải 1.000.000 VNĐ và
-                                quà tặng từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i class="bi bi-award-fill"></i> 06 giải khuyến khích (mỗi bảng 02
-                                giải): mỗi giải 1.000.000 VNĐ và
-                                quà tặng từ BTC và nhà tài trợ</a>
+                        <div class="social-icons" id="">
+                            <p><i style="color: #d5d522;" class="bi bi-award-fill"></i>03 giải nhất (mỗi bảng 01 giải):
+                                mỗi giải 60.000.000 VNĐ kèm Kỷ niệm chương (xác nhận đội thi, đơn vị) và quà tặng từ BTC
+                                và nhà tài trợ</p>
+                            <p><i style="color: #c8c8c0;" class="bi bi-award-fill"></i>03 giải nhì (mỗi bảng 01 giải):
+                                mỗi giải 10.000.000 VNĐ kèm Kỷ niệm chương và quà tặng từ BTC và nhà tài trợ</p>
+                            <p><i style="color: #ba740a;" class="bi bi-award-fill"></i>03 giải ba (mỗi bảng 01 giải):
+                                mỗi giải 5.000.000 VNĐ kèm Kỷ niệm chương và quà tặng từ BTC và nhà tài trợ.</p>
+                            <p><i class="bi bi-award-fill"></i>09 giải khuyến khích (mỗi bảng 03 giải): mỗi giải
+                                2.000.000 VNĐ kèm Kỷ niệm chương và quà tặng từ BTC và nhà tài trợ.</p>
+                            <p><i class="bi bi-award-fill"></i>Các giải tiềm năng: quà tặng từ BTC và nhà tài trợ.</p>
                         </div>
                     </form>
                 </div>
@@ -276,24 +263,24 @@
                     <form>
                         <h1><i id="vang" class="bi bi-trophy-fill"></i> Vòng sơ loại</h1>
                         <div class="social-icons">
-                            <a href="#" class="icon"><i style="color: #d5d522;" class="bi bi-award-fill"></i> 03 giải
+                            <p><i style="color: #d5d522;" class="bi bi-award-fill"></i> 03 giải
                                 nhất (mỗi bảng 01 giải):
                                 mỗi giải 30.000.000 VNĐ và quà
-                                tặng từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i style="color: #c8c8c0;" class="bi bi-award-fill"></i> 03 giải
+                                tặng từ BTC và nhà tài trợ</p>
+                            <p><i style="color: #c8c8c0;" class="bi bi-award-fill"></i> 03 giải
                                 nhì (mỗi bảng 01 giải):
                                 mỗi giải 10.000.000 VNĐ và quà tặng
-                                từ BTC và nhà tài trợ </a>
-                            <a href="#" class="icon"><i style="color: #ba740a;" class="bi bi-award-fill"></i> 06 giải ba
+                                từ BTC và nhà tài trợ </p>
+                            <p><i style="color: #ba740a;" class="bi bi-award-fill"></i> 06 giải ba
                                 (mỗi bảng 02 giải): mỗi
                                 giải 2.000.000 VNĐ và quà tặng
-                                từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i class="bi bi-award-fill"></i> 06 giải khuyến khích (mỗi bảng 02
+                                từ BTC và nhà tài trợ</p>
+                            <p><i class="bi bi-award-fill"></i> 06 giải khuyến khích (mỗi bảng 02
                                 giải): mỗi giải 1.000.000 VNĐ và
-                                quà tặng từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i class="bi bi-award-fill"></i> 06 giải khuyến khích (mỗi bảng 02
+                                quà tặng từ BTC và nhà tài trợ</p>
+                            <p><i class="bi bi-award-fill"></i> 06 giải khuyến khích (mỗi bảng 02
                                 giải): mỗi giải 1.000.000 VNĐ và
-                                quà tặng từ BTC và nhà tài trợ</a>
+                                quà tặng từ BTC và nhà tài trợ</p>
                         </div>
                     </form>
                 </div>
@@ -387,11 +374,7 @@
     <section id="time" style="padding: 50px 0;">
         <div class="vam_wrap2">
             <div style="display: flex;justify-content: center;">
-                <span style="background-image: -webkit-linear-gradient(top, hsl(319.02deg 68.97% 45.49% / 32%), rgb(198 35 146 / 18%), hsl(0deg 0% 100% / 0%));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                position: relative;
-                font-size: 56px;">Thời gian còn lại đăng ký</span>
+                <span class="vam_titleup2">Thời gian còn lại đăng ký</span>
             </div>
             <h1 class="vam_title" style="padding-bottom: 50px ;text-align: center;" id="time_title">Cơ cấu giải
                 thưởng
@@ -536,11 +519,9 @@
         </section>-->
     </div>
 
-    <section id="question"
-        style="background-image:url(https://aimkt.misacdn.net/admin/template/assets/landing-pages-v2/86c9615c-cc08-4a41-bec4-8a39fae0a2f1.png);padding: 50px;background-size: contain;background-position: center;background-repeat: no-repeat;">
+    <section id="question">
         <div class="vam_wrap2" id="question_load">
-            <h3 class="vam_title"
-                style="padding-bottom: 50px;color: white;background: none;-webkit-text-fill-color:unset;text-align: center;">
+            <h3 class="vam_title">
                 Q&A: Một số câu
                 hỏi thường gặp</h3>
         </div>
@@ -548,11 +529,11 @@
     <section id="footer">
         <div
             style="width: 100%;display: flex;justify-content: center;background-color: var(--color-text);position: relative;">
-            <img style="height: 100%;width: auto;"
+            <!--<img style="height: 100%;width: auto;"
                 src="https://edustorge.ubtrobot.com/ucode-new-website/ubt-competition-official-website/v1.5.2/cdn-statics/img/footer-1.0afcd93.png">
             <div
                 style="width: 2px;background-color: white;height: 90%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
-            </div>
+            </div>-->
             <img
                 src="https://edustorge.ubtrobot.com/ucode-new-website/ubt-competition-official-website/v1.5.2/cdn-statics/img/footer-1.0afcd93.png">
         </div>
@@ -581,8 +562,7 @@
 
             </div>
         </div>
-        <div
-            style="width: 100%;display: flex;justify-content: center;align-items: center;background-color: black;color: white;padding: 20px 0;">
+        <div class="bottom_ft">
             <p style="margin: 0;">©2012-2024 Ubtech Robotics Corp. All rights reserved . </p>
         </div>
     </section>
