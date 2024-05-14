@@ -70,6 +70,9 @@ fetchSheet
         document.querySelector('#object_content2').innerText = rows[1]['Nội dung bảng']
         document.querySelector('#object_title3').innerText = rows[2]['Tiêu đề bảng']
         document.querySelector('#object_content3').innerText = rows[2]['Nội dung bảng']
+        document.querySelectorAll('.object_wrapimg>img')[0].src = rows[0]['Hình ảnh']
+        document.querySelectorAll('.object_wrapimg>img')[1].src = rows[1]['Hình ảnh']
+        document.querySelectorAll('.object_wrapimg>img')[2].src = rows[2]['Hình ảnh']
     });
 
 
@@ -81,6 +84,7 @@ fetchSheet
     .then((rows) => {
         let d = ""
         let i = 1
+        document.querySelector('#timeline_titleup').innerText = rows[0]['Tiêu đề']
         document.querySelector('#timeline_title').innerText = rows[0]['Tiêu đề']
         rows.forEach((t) => {
             if (i % 2 === 0) {
@@ -185,7 +189,15 @@ fetchSheet
             }
         })
     });
-
+fetchSheet
+    .fetch({
+        gSheetId: '1w0ZWTWCwLovFMRhTHiYAS9yst4qptwjLRcI2GncXUjI',
+        wSheetName: 'Giaithuong',
+    })
+    .then((rows) => {
+        document.querySelector('#prize_titleup').innerHTML = rows[0]['Tiêu đề']
+        document.querySelector('#prize_title').innerHTML = rows[0]['Tiêu đề']
+    });
 
 fetchSheet
     .fetch({
@@ -193,12 +205,14 @@ fetchSheet
         wSheetName: 'HinhThucToChuc',
     })
     .then((rows) => {
+        document.querySelector('#organizational_titleup').innerText = rows[0]['Tiêu đề']
         document.querySelector('#organizational_title').innerText = rows[0]['Tiêu đề']
         document.querySelector('#organizational_titlep').innerText = rows[0]['Tiêu đề phụ']
         let r = ''
         rows.forEach((t) => {
             r += `<p style="text-indent: 10%;" class="vam_content">${t['Nội dung']}</p>`
         })
+        document.querySelector('#organizational_img1>img').src = rows[0]['Hình ảnh']
         document.querySelector('#organizational_content1').innerHTML += r
     });
 
