@@ -197,6 +197,16 @@ fetchSheet
     .then((rows) => {
         document.querySelector('#prize_titleup').innerHTML = rows[0]['Tiêu đề']
         document.querySelector('#prize_title').innerHTML = rows[0]['Tiêu đề']
+        rows.forEach((t) => {
+            if (t['Vòng sơ loại'] != '') {
+
+            }
+        })
+        rows.forEach((t) => {
+            if (t['Vòng chung kết'] != '') {
+
+            }
+        })
     });
 
 fetchSheet
