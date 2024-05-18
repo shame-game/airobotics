@@ -1773,14 +1773,25 @@ canvas {
     font-size: 1rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 640px) {
     .mun>div {
         border: none;
-        width: 50%;
+        width: 100%;
+        height: 80px;
     }
 
     .mun>div>div>div {
         background-color: unset;
+    }
+
+    .mun {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .mun>h1 {
+        padding-bottom: 0;
     }
 }
 
