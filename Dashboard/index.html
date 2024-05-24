@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="./src/index.css">
+  <link rel="stylesheet" href="./src/Student/student.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -31,18 +32,31 @@
       </div>
     </div>
     <div class="infordetail_back-bottom">
-      <div class="infordetail_back-bottom-wrap">
-        <div>
-          <p id="id_student">ID: AI0001</p>
-          <p id="class_student">Lớp: 24PR001</p>
+      <div class="infordetail_back-bottom-wrap" style="position: relative;">
+        <h1 class="infordetail_back-bottom-title">Tất cả khóa học</h1>
+        <div id="loadcheckin" style="display: none;">
+          <div style="padding: 16px;">
+            <div style="display: flex;gap: 10px;align-items: center; position: relative;">
+              <h1>AI Transformer</h1><span>Chú thích</span>
+              <div id="chuthich_Student" style="display: none;">
+                <div style="display: flex;gap: 10px;align-items: center;">
+                  <div class="divchuthich_Student" style="background-color: #70ff70;"></div>Đã Học
+                </div>
+                <div style="display: flex;gap: 10px;align-items: center;">
+                  <div class="divchuthich_Student" style="background-color: #ff7f7f;"></div>Nghỉ Học
+                </div>
+                <div style="display: flex;gap: 10px;align-items: center;">
+                  <div class="divchuthich_Student" style="background-color: #575757;"></div>Chưa học
+                </div>
+              </div>
+            </div>
+            <p id="Out_checkin">Quay lại <i class="bi bi-box-arrow-right"></i></p>
+          </div>
+          <div class="row" style="margin: 0;" id="loadcheckin_main">
+
+          </div>
         </div>
-        <div>
-          <p id="parent_student">Phụ huynh: Nguyễn Nhật Khoa</p>
-          <p id="address_student">Địa chỉ: Biên Hòa, Đồng Nai</p>
-        </div>
-        <div>
-          <p id="email_student">Email: nhatkhoa13@gmail.com</p>
-          <p id="phone_student">Số điện thoại: 0833911374</p>
+        <div class="row" id="loadkhoahoc">
         </div>
       </div>
     </div>
@@ -113,7 +127,10 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.statically.io/gh/tr1nh/fetch-sheet.js/master/fetch-sheet.min.js"></script>
   <script src="./src/Home.js"></script>
-  <script src="./src/Student.js"></script>
+  <!-- Trang học sinh -->
+  <script src="./src/Student/Student.js"></script>
+  <script src="./src/Student/VStudent.js"></script>
+
   <script src="./src/Data.js"></script>
   <script>
     window.onload = () => {

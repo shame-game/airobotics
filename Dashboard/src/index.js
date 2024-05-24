@@ -107,156 +107,14 @@ else {
     });
 }
 HienTrangChu()
-
-// Hiển thị học sinh
-function HienStudent() {
-    pageStudent(() => {
-        loadstudent((callback) => {
-            let danhsachlop = '<p>Tất cả lớp</p>';
-            let items = '';
-            let teacher = {};
-            callback.forEach((data) => {
-                if (data['Class'] != '') {
-                    if (teacher[data['Class']]) {
-                        teacher[data['Class']]++
-                    }
-                    else {
-                        teacher[data['Class']] = 1
-                    }
-                }
-            })
-            Object.keys(teacher).forEach((key) => {
-                danhsachlop += `<p>${key}</p>`
-            })
-            vam('.danhsachlop>div').innerHTML = danhsachlop
-            callback.forEach((t) => {
-                if (t.ID != '') {
-                    items +=
-                        `<div class="student__detail visi" data-name="${t.Fullname}" data-id="${t[['ID']]}" data-class="${t['Class']}">
-                        <a>${t.ID}</a>
-                        <a>${t.Fullname}</a>
-                        <a>${t.Class}</a>
-                        <a>${t.Address}</a>
-                        <a>${t.Numbers}</a>
-                        <a class="Student__status">${t.Status}</a>
-                    </div>`
-                }
-            })
-            vam('#student__data').innerHTML = items;
-            vams('.student__detail').forEach((t) => {
-                t.onclick = () => {
-                    vam('#inforstudentdetail').setAttribute('style', 'display:block');
-                    vam('.infordetail_wrap').setAttribute('style', 'display:block');
-                    vam('#inforstudentdetail').onclick = () => {
-                        vam('#inforstudentdetail').setAttribute('style', 'display:none');
-                        vam('.infordetail_wrap').setAttribute('style', 'display:none');
-                    }
-                    callback.forEach((data) => {
-                        if (t.getAttribute('data-id') == data['ID']) {
-                            vam('.infordetail_back-mid__name>h1').innerText = data['Fullname'];
-                            vam('#id_student').innerText = 'ID: ' + data['ID'];
-                            vam('#class_student').innerText = 'Học lớp: ' + data['Class'];
-                            vam('#parent_student').innerText = 'Họ và tên phụ huynh: ' + data['ParentName'];
-                            vam('#address_student').innerText = 'Địa chỉ: ' + data['Address'];
-                            vam('#email_student').innerText = 'Email: ' + data['Email'];
-                            vam('#phone_student').innerText = 'Số điện thoại: ' + data['Numbers'];
-
-                            async function kiemTraDuongDan(duongDan) {
-                                try {
-                                    const response = await fetch(duongDan);
-                                    vam('#profile_student').onclick = () => {
-                                        window.open(`${data['Profile']}`, '_blank');
-                                    }
-                                    if (!response.ok) {
-                                        vam('#profile_student').onclick = () => {
-                                            alert('Học sinh chưa có hồ sơ điện tử')
-                                        }
-                                    }
-                                } catch (error) {
-
-                                }
-                            }
-                            kiemTraDuongDan(`${data['Profile']}`);
-                        }
-                    })
-
-                }
-            })
-            vams('.Student__status').forEach((t) => {
-                if (t.innerText == 'Đang học') {
-                    t.setAttribute('style', 'color:#29bcce')
-                }
-                else if (t.innerText == 'Chờ lên khóa') {
-                    t.setAttribute('style', 'color:#fed45b')
-                }
-                else if (t.innerText == 'Nghỉ học') {
-                    t.setAttribute('style', 'color:#f15353')
-                }
-            })
-            vams('.danhsachlop>div>p').forEach((t) => {
-                t.onclick = () => {
-                    vam('.chonlop>button').innerText = t.innerText;
-                    if (t.innerText == 'Tất cả lớp') {
-                        vams('.student__detail').forEach((f) => {
-                            if (f.getAttribute('class').includes("search") == true) {
-                                f.classList.remove('search')
-                            }
-                            f.classList.add('visi')
-                        })
-                    }
-                    else {
-                        vams('.student__detail').forEach((f) => {
-                            if (f.getAttribute('class').includes("visi") == true) {
-                                f.classList.remove('visi')
-                            }
-                            if (f.getAttribute('class').includes("search") == true) {
-                                f.classList.remove('search')
-                            }
-                            let g = f.getAttribute('data-class')
-                            if (g == t.innerText) {
-                                f.classList.add('visi')
-                            }
-                        })
-                    }
-                }
-            })
-        });
-        vam('.detail__search>p').onclick = () => {
-            vams(`.student__detail.visi`).forEach((t) => {
-                if (t.getAttribute('class').includes("search") == true) {
-                    t.classList.remove('search')
-                }
-            })
-        }
-        vam('.chonlop').onclick = () => {
-            vam('.danhsachlop').classList.toggle('hide')
-        }
-
-
-    })
+function Fcheckin(student, checkin) {
+    console.log(student, checkin);
 }
-// tìm kiếm thông tin học sinh
-function removeAccents(str) {
-    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-}
-function searchData() {
-    const searchValue = removeAccents(document.querySelector("#SearchStudent").value.toLowerCase());
-    let data = [];
-    vams(`.student__detail.visi`).forEach((t) => {
-        data = data.concat(t.getAttribute('data-name'))
-        t.classList.add('search')
-    })
-    const filteredData = data.filter(item => removeAccents(item.toLowerCase()).includes(searchValue));
-    filteredData.forEach(item => {
-        vams(`.student__detail.search[data-name="${item}"]`).forEach((t) => {
-            t.classList.remove('search')
-        })
-    });
-}
+
+
 
 // Hiện thị trang chủ
 function HienTrangChu() {
-
     loaddatacs((callback) => {
         let i = 0
         let dlmd = 0
@@ -583,18 +441,25 @@ function HienData() {
     })
 }
 // lấy dữ liệu học sinh
-var data = []
 function loadstudent(callback) {
     fetchSheet
         .fetch({
             gSheetId: '1seaoPDLCyGHanPFC78ovoaKqo9DMj-grSzNMDImFvwM',
             wSheetName: 'Data Student',
         })
-        .then((rows) => {
-            data = rows
-            callback(data)
+        .then((student) => {
+            fetchSheet
+                .fetch({
+                    gSheetId: '1seaoPDLCyGHanPFC78ovoaKqo9DMj-grSzNMDImFvwM',
+                    wSheetName: 'Checkin',
+                })
+                .then((checkin) => {
+                    callback(student, checkin)
+                });
         });
 }
+
+
 
 // lấy dữ liệu giáo viên
 function loadteacher(callback) {

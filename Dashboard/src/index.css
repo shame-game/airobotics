@@ -1474,10 +1474,7 @@ table#example {
     transition: all .3s linear;
 }
 
-.student__detail:hover {
-    background-color: #ebecfe;
-    cursor: pointer;
-}
+
 
 .Home__boxs p {
     font-size: 1.2rem;
