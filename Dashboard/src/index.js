@@ -74,7 +74,7 @@ vam('.sidebar__item.schedule').onclick = () => {
         vam('.sidebar__item--actived.sidebar__item').classList.remove('sidebar__item--actived');
         vam('.sidebar__item.schedule').classList.add('sidebar__item--actived')
         vam('#main').innerHTML = ''
-        vam('.topbar__title').innerText = 'Lịch học'
+        vam('.topbar__title').innerText = 'Lịch dạy'
         HienSchedule()
     }
 }
