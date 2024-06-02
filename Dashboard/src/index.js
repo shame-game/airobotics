@@ -64,6 +64,20 @@ vam('.sidebar__item.data').onclick = () => {
         })
     }
 }
+vam('.sidebar__item.schedule').onclick = () => {
+    if (vam('.sidebar__item--actived.schedule') == null) {
+        if (wid < 1100) {
+            vam('.bg.hide').classList.remove('hide')
+            $('.account__container').toggleClass('hiden')
+            $('.sidebar__container').toggleClass('hiden')
+        }
+        vam('.sidebar__item--actived.sidebar__item').classList.remove('sidebar__item--actived');
+        vam('.sidebar__item.schedule').classList.add('sidebar__item--actived')
+        vam('#main').innerHTML = ''
+        vam('.topbar__title').innerText = 'Lịch học'
+        HienSchedule()
+    }
+}
 
 
 // điều khiển menu
@@ -107,11 +121,6 @@ else {
     });
 }
 HienTrangChu()
-function Fcheckin(student, checkin) {
-    console.log(student, checkin);
-}
-
-
 
 // Hiện thị trang chủ
 function HienTrangChu() {
@@ -512,4 +521,14 @@ function loaddatacs(callback) {
         });
 }
 
-console.log('Cảnh báo bảo mật');
+function loaddatacs(callback) {
+    fetchSheet
+        .fetch({
+            gSheetId: '1seaoPDLCyGHanPFC78ovoaKqo9DMj-grSzNMDImFvwM',
+            wSheetName: 'DataIsSupported',
+        })
+        .then((rows) => {
+            data = rows
+            callback(data)
+        });
+}
