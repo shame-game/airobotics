@@ -10,10 +10,7 @@ function Loadfullvn() {
             <a class="template" href="#d551412a2">khóa học đã học</a>
             <a class="create" href="#d551412a3">Kỹ năng</a>
             <a class="contact" href="#tongquan">Tổng quát</a>
-            <select id="lang" class="form-select" aria-label="Default select example" onchange="fenderChanged(this)">
-                <option value="vn">VN</option>
-                <option value="en">EN</option>
-            </select>
+
         </div>
     </div>
     <div class="loadweb">
@@ -420,13 +417,11 @@ function Loadcontent(url, en) {
         </div>
         <div class="introone"></div>
     </div>`;
-    window.onload = () => {
-        vam('.loadweb').remove();
-        vam('#mainintro').innerHTML = intromain
-        setTimeout(() => {
-            vam('.intro').remove()
-        }, 2500)
-    };
+    vam('.loadweb').remove();
+    vam('#mainintro').innerHTML = intromain
+    setTimeout(() => {
+        vam('.intro').remove()
+    }, 2500)
 
     fetchSheet
         .fetch({
@@ -434,6 +429,7 @@ function Loadcontent(url, en) {
             wSheetName: 'Banner',
         })
         .then((rows) => {
+            console.log(rows);
             let g = rows[0]
             ThongTin(g['Name'], g['Date'], g['Address'], g['Class']);
             vam('.banner__background>img').src = g['BackGround'];
@@ -758,3 +754,8 @@ function Loadcontent(url, en) {
         vam('.Menu-nav').setAttribute('style', 'display:none')
     }
 }
+
+/*            <select id="lang" class="form-select" aria-label="Default select example" onchange="fenderChanged(this)">
+                <option value="vn">VN</option>
+                <option value="en">EN</option>
+            </select>*/
