@@ -34,7 +34,7 @@ function Check() {
     }
 }
 
-/*Check()*/
+Check()
 
 function getCookie(name) {
     var cookieName = name + "=";
