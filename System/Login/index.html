@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script defer src="./index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIR Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../src/popup.css">
+    <link rel="stylesheet" href="../src/All/popup.css">
+</head>
+
+<body>
+    <div class="load" style="display: none;">
+        <div><img src="https://lh3.googleusercontent.com/d/1uoHzj9hBN0wKXGYPzC5B4UUKS5Lx914E">
+            <p>loading
+            <div id="load1"></div>
+            <div id="load2"></div>
+            <div id="load3"></div>
+            </p>
+        </div>
+    </div>
+    <header>
+        <div>
+            <img src="https://lh3.googleusercontent.com/d/1zfCe52xWj702SjieKrev4-kWctE9O3Qy">
+            <h1>AI Robotic - Khóa học cho trẻ</h1>
+        </div>
+        <div>
+            <a id="icon_f" href="https://www.facebook.com/lhub304" target="_blank">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a id="icon_y" href="https://www.youtube.com/@airobotic2024" target="_blank">
+                <i class="bi bi-youtube"></i>
+            </a>
+        </div>
+    </header>
+    <div id="Chonncc">
+        <h1>Bạn là ai?</h1>
+        <div>
+            <div id="Teacher" data-g="teacher">
+                <img src="https://lh3.googleusercontent.com/d/1e82ZT_FtcYmV6PRJbMAUKHzrL-K4HKC3">
+                <h1>Giáo viên</h1>
+            </div>
+            <div id="Parent" data-g="parents">
+                <img src="https://lh3.googleusercontent.com/d/1RTQrl6M175WQqS8-0wAbjoTT7o9niILj">
+                <h1>Phụ huynh</h1>
+            </div>
+        </div>
+    </div>
+    <main id="login_wrap" style="display: none;">
+        <div class="main">
+            <div id="Form_Title">
+                <p>Quay lại</p>
+                <h1>Đăng nhập</h1>
+            </div>
+            <form id="Form_Login">
+                <input type="text" placeholder="Tài khoản" name="tk">
+                <input type="password" placeholder="Mật khẩu" name="mk">
+            </form>
+            <div id="Form_Submit">
+                <button id="login">Đăng nhập</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <img src="https://lhu.edu.vn/ViewPage/LHUVNB4/_default/image/Logo_ChimLac_W.png">
+        <p>2024 - LHU - T&A Lab</p>
+    </footer>
+
+    <script>
+        let type = ''
+        document.querySelectorAll('#Chonncc>div>div').forEach((t) => {
+            t.onclick = () => {
+                type = t.getAttribute('data-g')
+                document.querySelector('#Chonncc').setAttribute('style', 'display:none')
+                document.querySelector('#login_wrap').setAttribute('style', 'display:block')
+            }
+        })
+        document.querySelector('#Form_Title p').onclick = () => {
+            type = ''
+            document.querySelector('#Chonncc').setAttribute('style', 'display:block')
+            document.querySelector('#login_wrap').setAttribute('style', 'display:none')
+        }
+        document.querySelector('#login').onclick = () => {
+            document.querySelector('.load').setAttribute('style', 'display:block')
+            let tk = document.querySelector('#Form_Login>input[name="tk"]').value
+            let mk = document.querySelector('#Form_Login>input[name="mk"]').value
+            fetch(`${url}?tk=${tk}&mk=${mk}&action=${type}`, { method: 'Get' })
+                .then(response => response.json())
+                .then((data) => {
+                    document.querySelector('.load').setAttribute('style', 'display:none')
+                    if (data.status == 'error') {
+                        alert(data.message)
+                    }
+                    else if (data.status != 'error') {
+                        console.log(data);
+                        var date = new Date();
+                        date.setTime(date.getTime() + (4 * 60 * 60 * 1000));
+                        expires = "; expires=" + date.toUTCString();
+                        document.cookie = 'vamnaone' + "=" + data.token + '|' + tk + expires + "; path=/";
+                        document.cookie = 'type' + "=" + type + expires + "; path=/";
+                        if (type == 'teacher') {
+                            window.location.href = "https://shame-game.github.io/AIR/"
+                        } else if (type == 'parents') {
+                            document.cookie = 'id' + "=" + data.student + expires + "; path=/";
+                            document.cookie = 'detail' + "=" + data.detail + expires + "; path=/";
+                            document.cookie = 'classN' + "=" + data.classN + expires + "; path=/";
+                            window.location.href = "https://shame-game.github.io/AIR/Parents"
+                        }
+
+                    }
+                })
+                .catch(error => alert('Lỗi: ' + error));
+        }
+    </script>
+
+</body>
+
+</html>
