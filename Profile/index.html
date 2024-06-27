@@ -37,7 +37,7 @@
             })
             .then((rows) => {
                 rows.forEach((t) => {
-                    if (window.location.href == `http://127.0.0.1:5500/Profile/?ID=${t['ID']}`) {
+                    if (window.location.href == `https://airobotic.edu.vn/Profile/?ID=${t['ID']}`) {
                         Loadfullvn()
                         Loadcontent(`${t['IDSheet']}`, 'Chủ đề đã học')
                         function fenderChanged() {
