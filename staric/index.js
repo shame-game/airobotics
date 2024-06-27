@@ -32,11 +32,6 @@ function Loadfullvn() {
                     <a class="template" href="#d551412a2">khóa học đã học</a>
                     <a class="create" href="#d551412a3">Kỹ năng</a>
                     <a class="contact" href="#tongquan">Tổng quát</a>
-                    <select id="langf" class="form-select" aria-label="Default select example"
-                        onchange="genderChanged(this)">
-                        <option value="vn">VN</option>
-                        <option value="en">EN</option>
-                    </select>
                 </ul>
             </div>
         </section>
@@ -235,12 +230,6 @@ function Loadfullen() {
                     <a class="template" href="#d551412a2">Courses studied</a>
                     <a class="create" href="#d551412a3">Skill</a>
                     <a class="contact" href="#tongquan">Generality</a>
-                    <select id="langf" class="form-select" aria-label="Default select example"
-                        onchange="genderChanged(this)">
-                        <option value="en">EN</option>
-                        <option value="vn">VN</option>
-
-                    </select>
                 </ul>
             </div>
         </section>
