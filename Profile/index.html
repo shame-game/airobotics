@@ -37,6 +37,7 @@
             })
             .then((rows) => {
                 rows.forEach((t) => {
+                    console.log(t.ID);
                     if (window.location.href == `https://airobotic.edu.vn/Profile/?ID=${t['ID']}`) {
                         Loadfullvn()
                         Loadcontent(`${t['IDSheet']}`, 'Chủ đề đã học')
