@@ -373,10 +373,11 @@ async function Loadcontent(id) {
 
     function loadVideoTt(data) {
         let items = ''
+        let i = 0
         data.forEach(t => {
             if (t['Hình ảnh thuyết trình'] != '') {
                 items +=
-                    `<li class="wow fadeInUp" data-wow-duration="1s">
+                    `<li class="wow fadeInUp" data-wow-duration="1s" data-iframe="${t['Video thuyết trình']}">
                         <div class="list_inners">
                             <div class="image">
                                 <img src="img/thumbs/42-29.jpg" alt />
@@ -398,7 +399,7 @@ async function Loadcontent(id) {
         t.onclick = () => {
             document.querySelector('.c661412b2-background_click').setAttribute('style', 'display:flex')
             document.querySelector('.c661412b2-iframe_click').setAttribute('style', 'display:flex')
-            var c661412b2Iframe = `<iframe class="c661412b2-iframe" src="https://drive.google.com/file/d/134GgN7uzOyAXd0LFnXZB4Sr7F-YYGdNh/preview" frameborder="0"
+            var c661412b2Iframe = `<iframe class="c661412b2-iframe" src="${t.getAttribute('data-iframe')}" frameborder="0"
                                                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
             document.querySelector('.c661412b2-iframe_click').innerHTML = c661412b2Iframe
             document.querySelector('.c661412b2-background_click').addEventListener('click', () => {
