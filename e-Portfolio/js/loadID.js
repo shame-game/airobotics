@@ -373,7 +373,6 @@ async function Loadcontent(id) {
 
     function loadVideoTt(data) {
         let items = ''
-        let i = 0
         data.forEach(t => {
             if (t['Hình ảnh thuyết trình'] != '') {
                 items +=
