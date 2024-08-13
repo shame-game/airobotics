@@ -376,8 +376,8 @@ async function Loadcontent(id) {
         data.forEach(t => {
             if (t['Hình ảnh thuyết trình'] != '') {
                 items +=
-                    `<li class="wow fadeInUp" data-wow-duration="1s" data-iframe="${t['Video thuyết trình']}">
-                        <div class="list_inners">
+                    `<li class="wow fadeInUp" data-wow-duration="1s" >
+                        <div class="list_inners" data-iframe="${t['Video thuyết trình']}">
                             <div class="image">
                                 <img src="img/thumbs/42-29.jpg" alt />
                                 <div class="main"
