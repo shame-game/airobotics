@@ -17,6 +17,7 @@ fetchSheet
             let strWithoutDiacriticsAndWhitespace = removeVietnameseDiacriticsAndWhitespace(vietnameseString);
             if (currentURL == `${rootURL}/e-Portfolio/?ID=${rows[i]['ID'] + strWithoutDiacriticsAndWhitespace}`) {
                 document.title = rows[i]['Name']
+                document.querySelector('meta[property="og:title"]').setAttribute('content', `Hồ sơ điện tử của học viên ${rows[i]['Name']}`)
                 document.querySelector('meta[property="og:description"]').setAttribute('content', `Hồ sơ điện tử của học viên ${rows[i]['Name']}`)
                 Loadcontent(rows[i]['Detail'])
                 break
@@ -26,7 +27,7 @@ fetchSheet
 
 async function Loadcontent(id) {
     let data = await fetchSheet.fetch({ gSheetId: id }).then((c) => { return c })
-
+    document.querySelector('meta[property="og:image"]').setAttribute('content', data[0]['Avatar'])
     document.querySelector('#LoadID').innerHTML = (
         `<div class="dizme_tm_mobile_menu">
                 <div class="mobile_menu_inner">
