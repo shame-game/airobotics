@@ -235,60 +235,60 @@ fetchSheet
             ]
         });
     });
+$.getJSON('https://s4h.edu.vn/wp-json/wp/v2/posts?_embed', function (posts) {
+    let items = '';
 
-fetchSheet
-    .fetch({
-        gSheetId: '1sfm3I2VT4byXlqFSCgYMRMNHNda7ozBwsGdDG8HqZ5A',
-        wSheetName: 'new',
-    })
-    .then((rows) => {
-        let items = '';
-        rows.forEach((t) => {
+    
+    posts.forEach(t => {
+        let image = 'https://s4h.edu.vn/wp-content/uploads/' + t['_embedded']['wp:featuredmedia'][0]['media_details']['file']      
+        console.log(image);
+        if (t.class_list[t.class_list.length - 1] == 'category-tintuc') {
             items +=
                 `<div style="padding: 10px">
-                    <div class="bao-img">
-                        <a target="_blank" href="${t['Link_Sự kiện']}">
-                            <div class="bao-card-img"><img src="${t['Hình ảnh_Báo']}"></div>
-                            <div class="bao-card-content">
-                                <h2>${t['Tiêu đề_Báo']}</h2>
-                                <div style="display: flex; height: max-content;justify-content: space-between;align-items: center;margin: 20px 0;">
-                                    
-                                        <h3>Xem Thêm</h3>
-                                </div>
+                <div class="bao-img">
+                    <a target="_blank" href="${t.link}">
+                        <div class="bao-card-img"><img src="${image}"></div>
+                        <div class="bao-card-content">
+                            <h2>${t['title']['rendered']}</h2>
+                            <div style="display: flex; height: max-content;justify-content: space-between;align-items: center;margin: 20px 0;">
+                                
+                                    <h3>Xem Thêm</h3>
                             </div>
-                        </a>
-                    </div>
-                </div>`
-        })
-        document.querySelector('#sk_sheet').innerHTML = items;
-        $('#sk_sheet').slick({
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
-            pauseOnHover: false,
-            prevArrow: '<span class="prev"><i class="bi-chevrond-left"></i></span>',
-            nextArrow: '<span class="next"><i class="bi-chevrond-right"></i></span>',
-            responsive: [
-                {
-                    breakpoint: 1280,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        prevArrow: '',
-                        nextArrow: '',
-                        arrows: false,
-                        dots: true,
-                    },
+                        </div>
+                    </a>
+                </div>
+            </div>`
+        }
+    })
+    document.querySelector('#sk_sheet').innerHTML = items;
+    $('#sk_sheet').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        pauseOnHover: false,
+        prevArrow: '<span class="prev"><i class="bi-chevrond-left"></i></span>',
+        nextArrow: '<span class="next"><i class="bi-chevrond-right"></i></span>',
+        responsive: [
+            {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    prevArrow: '',
+                    nextArrow: '',
+                    arrows: false,
+                    dots: true,
                 },
-                {
-                    breakpoint: 1000,
-                    settings: {
-                        slidesToShow: 1,
-                        dots: true,
-                        arrows: false,
-                    },
-                }
-            ]
-        });
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false,
+                },
+            }
+        ]
     });
+})
