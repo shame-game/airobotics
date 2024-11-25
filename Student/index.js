@@ -1,33 +1,34 @@
 let url = '1cuhLv5O7043CjbIHAeBBXvnLIJzv1USA1wpjHedWeRg'
-let currentURL = window.location.href;
+let currentURL = new URL(window.location.href);
 let rootURL = window.location.protocol + "//" + window.location.host
-function removeVietnameseDiacriticsAndWhitespace(str) {
-    return str.normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/\s+/g, '')
-        .replace(/đ/g, 'd')
-        .replace(/Đ/g, 'D');
+const colorSkill = ['#f75023', '#1cbe59', '#8067f0', '#23ebf7', '#e4e223', '#2f5cd1']
+const lv = {
+    FZ1: 1,
+    FZ2: 2,
+    SL1: 3,
+    SL2: 4,
+    MW1: 5,
+    TW1: 6,
+    TW2: 7,
+    SA1: 8,
+    SA2: 9,
+    SE1: 10,
+    SE2: 11,
+    SD1: 12,
+    SD2: 13,
+    AE1: 14,
+    AE2: 15
 }
-
-
-fetchSheet
-    .fetch({ gSheetId: url }).then((rows) => {
-        for (let i in rows) {
-            let vietnameseString = rows[i]['Name'];
-            let strWithoutDiacriticsAndWhitespace = removeVietnameseDiacriticsAndWhitespace(vietnameseString);
-            if (currentURL == `${rootURL}/e-Portfolio/?ID=${rows[i]['ID'] + strWithoutDiacriticsAndWhitespace}`) {
-                document.title = rows[i]['Name']
-                document.querySelector('meta[property="og:title"]').setAttribute('content', `Hồ sơ điện tử của học viên ${rows[i]['Name']}`)
-                document.querySelector('meta[property="og:description"]').setAttribute('content', `Hồ sơ điện tử của học viên ${rows[i]['Name']}`)
-                Loadcontent(rows[i]['Detail'])
-                break
-            }
-        }
-    })
+let studentId = currentURL.searchParams.get('ID')
+Loadcontent(studentId)
 
 async function Loadcontent(id) {
-    let data = await fetchSheet.fetch({ gSheetId: id }).then((c) => { return c })
-    document.querySelector('meta[property="og:image"]').setAttribute('content', data[0]['Avatar'])
+    let data = await fetch(`http://localhost:3000/api/Student_PF/getPF_web?ID=${id}`)
+    data = await data.json()
+    document.querySelector('meta[property="og:image"]').setAttribute('content', data.data.Avatar)
+    document.querySelector('meta[property="og:title"]').setAttribute('content', `Hồ sơ điện tử của học viên ${data.name}`)
+    document.querySelector('meta[property="og:description"]').setAttribute('content', `Hồ sơ điện tử của học viên ${data.name}`)
+
     document.querySelector('#LoadID').innerHTML = (
         `<div class="dizme_tm_mobile_menu">
                 <div class="mobile_menu_inner">
@@ -63,7 +64,7 @@ async function Loadcontent(id) {
                 <div class="container">
                     <div class="inner">
                         <div class="logo">
-                            <a href="#"><img src="https://airobotic.edu.vn/staric/Image/Logo.png" alt /></a>
+                            <a href="#"><img src="https://lh3.googleusercontent.com/d/1ONDBWZlaTQ66ukD4GowxjAEuOHP9bkbr" alt /></a>
                         </div>
                         <div class="menu">
                             <ul class="anchor_nav">
@@ -90,7 +91,7 @@ async function Loadcontent(id) {
                                     <h3 class="orangeText">Xin chào, tôi là</h3>
                                 </div>
                                 <div class="name">
-                                    <h3 style="font-weight: 600;">${data[0]['Name']}</h3>
+                                    <h3 style="font-weight: 600;">${data.name}</h3>
                                 </div>
                                 <div class="job">
                                     <p>Là <span class="purpleText">Học sinh của Trung Tâm AI Robotic</span></p>
@@ -106,7 +107,7 @@ async function Loadcontent(id) {
                             </div>
                             <div class="avatar">
                                 <div class="image">
-                                    <img src="${data[0]['Avatar']}" alt />
+                                    <img src="${data.data.Avatar}" alt />
                                 </div>
                             </div>
                         </div>
@@ -132,18 +133,18 @@ async function Loadcontent(id) {
                         <div class="wrapper">
                             <div class="left">
                                 <div class="image">
-                                    <img src="${data[0]['Hình giới thiệu']}" />
+                                    <img src="${data.data.Avatar}" />
                                     <div class="numbers year">
                                         <div class="wrapper">
-                                            <h3><span class="dizme_tm_counter" data-from="00" data-to="${data[0]['Số khóa tham gia']}"
-                                                    data-speed="2000">${data[0]['Số khóa tham gia']}</span></h3>
+                                            <h3><span class="dizme_tm_counter" data-from="00" data-to="${Object.keys(data.course).length}"
+                                                    data-speed="2000">${Object.keys(data.course).length}</span></h3>
                                             <span class="name">Khóa học<br />tham gia</span>
                                         </div>
                                     </div>
                                     <div class="numbers project">
                                         <div class="wrapper">
-                                            <h3><span class="dizme_tm_counter" data-from="0" data-to="${data[0]['Số dự án tham gia']}"
-                                                    data-speed="2000">${data[0]['Số dự án tham gia']}</span></h3>
+                                            <h3><span class="dizme_tm_counter" data-from="0" data-to="${Object.keys(data.course).length * 7}"
+                                                    data-speed="2000">${Object.keys(data.course).length * 7}</span></h3>
                                             <span class="name">Dự án<br />thực hiện</span>
                                         </div>
                                     </div>
@@ -155,7 +156,7 @@ async function Loadcontent(id) {
                                     <h3>Bạn có thể biết một vài điều về tôi</h3>
                                 </div>
                                 <div class="text wow fadeInUp" data-wow-duration="1s">
-                                    <p style="text-align: justify;">${data[0]['Giới thiệu']}</p>
+                                    <p style="text-align: justify;">${data.data.Intro}</p>
                                 </div>
     
                             </div>
@@ -179,7 +180,7 @@ async function Loadcontent(id) {
                         <div class="dizme_tm_portfolio_titles"></div>
                         <div class="portfolio_list wow fadeInUp" data-wow-duration="1s" style="padding-top: 50px;">
                             <ul class="gallery_zoom grid">
-                                ${getIMGProject(data)}
+                                ${getIMGProject(data.data.ImgPJ)}
                             </ul>
                         </div>
                     </div>
@@ -195,64 +196,21 @@ async function Loadcontent(id) {
                                     <h3>6 Kĩ năng của học sinh trong quá trình học</h3>
                                 </div>
                                 <div class="dodo_progress wow fadeInUp" data-wow-duration="1s">
-                                    <div class="progress_inner" data-value="${data[0]['Kĩ năng'].split('=')[1]}" data-color="#f75023">
-                                        <span><span class="label">${data[0]['Kĩ năng'].split('=')[0]}</span><span
-                                                class="number">${data[0]['Kĩ năng'].split('=')[1]}%</span></span>
+                                    ${Object.entries(data.data.Skill).map((key, index) => {
+            return ` <div class="progress_inner" data-value="${key[1]}" data-color="${colorSkill[index]}">
+                                        <span><span class="label">${key[0]}</span><span
+                                                class="number">${key[1]}%</span></span>
                                         <div class="background">
                                             <div class="bar">
                                                 <div class="bar_in"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="progress_inner" data-value="${data[1]['Kĩ năng'].split('=')[1]}" data-color="#1cbe59">
-                                        <span><span class="label">${data[1]['Kĩ năng'].split('=')[0]}</span><span
-                                                class="number">${data[1]['Kĩ năng'].split('=')[1]}%</span></span>
-                                        <div class="background">
-                                            <div class="bar">
-                                                <div class="bar_in"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="progress_inner" data-value="${data[2]['Kĩ năng'].split('=')[1]}" data-color="#8067f0">
-                                        <span><span class="label">${data[2]['Kĩ năng'].split('=')[0]}</span><span
-                                                class="number">${data[2]['Kĩ năng'].split('=')[1]}%</span></span>
-                                        <div class="background">
-                                            <div class="bar">
-                                                <div class="bar_in"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="progress_inner" data-value="${data[3]['Kĩ năng'].split('=')[1]}" data-color="#23ebf7">
-                                        <span><span class="label">${data[3]['Kĩ năng'].split('=')[0]}</span><span
-                                                class="number">${data[3]['Kĩ năng'].split('=')[1]}%</span></span>
-                                        <div class="background">
-                                            <div class="bar">
-                                                <div class="bar_in"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="progress_inner" data-value="${data[4]['Kĩ năng'].split('=')[1]}" data-color="#e0de3a">
-                                        <span><span class="label">${data[4]['Kĩ năng'].split('=')[0]}</span><span
-                                                class="number">${data[4]['Kĩ năng'].split('=')[1]}%</span></span>
-                                        <div class="background">
-                                            <div class="bar">
-                                                <div class="bar_in"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="progress_inner" data-value="${data[5]['Kĩ năng'].split('=')[1]}" data-color="#0249ff">
-                                        <span><span class="label">${data[5]['Kĩ năng'].split('=')[0]}</span><span
-                                                class="number">${data[5]['Kĩ năng'].split('=')[1]}%</span></span>
-                                        <div class="background">
-                                            <div class="bar">
-                                                <div class="bar_in"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div> `
+        }).join('')}   
                                 </div>
                             </div>
                             <div class="right">
-                                <img src="${data[0]['Hình ảnh kĩ năng']}" alt />
+                                <img src="${data.data.ImgSkill}" alt />
                             </div>
                         </div>
                     </div>
@@ -268,7 +226,31 @@ async function Loadcontent(id) {
                             <h3>Các khóa học đã tham gia</h3>
                         </div>
                         <div class="service_list">
-                            <ul>${loadCourseIp(data)}</ul>
+                            <ul>
+                            ${Object.keys(data.course).map((key) => {
+            return `<li class="wow fadeInLeft" data-wow-duration="1s">
+                    <div class="list_inner tilt-effect">
+                        <span class="icon">
+                            <img class="back" src="https://airobotic.edu.vn/staric/Image/LV${lv[key.slice(2, 5)]}.png" alt />
+                        </span>
+                        <div class="title">
+                            <h3>${key}</h3>
+                            <span class="price">Trạng thái: <span>Hoàn thành </span></span>
+                        </div>
+                        <a class="dizme_tm_full_link" href="#"></a>
+                        <img class="popup_service_image"
+                            src="${data.course[key].Image}" />
+                        <div class="service_hidden_details">
+                            <div class="service_popup_informations">
+                                <div class="descriptions">
+                                    <p style="text-align: justify;">${data.course[key].Comment}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>`
+        }).join('')}
+                            </ul>
                         </div>
                     </div>
                     <div class="brush_1 wow fadeInLeft" data-wow-duration="1s"><img src="img/brushes/service/5.png" alt />
@@ -285,7 +267,7 @@ async function Loadcontent(id) {
                             <h3>Dưới đây là một trong các video thuyết trình của học sinh trong suốt quá trình học tập</h3>
                         </div>
                         <div class="news_list">
-                            <ul>${loadVideoTt(data)}</ul>
+                           <ul>${loadVideoTt(data.data.Present)}</ul>
                         </div>
                     </div>
                     <div class="brush_1 wow zoomIn" data-wow-duration="1s"><img src="img/brushes/news/1.png" alt /></div>
@@ -330,9 +312,9 @@ async function Loadcontent(id) {
                     <div class="entry dizme_tm_portfolio_animation_wrap">
                         <a class="popup-youtube">
                             <img
-                                src="${t['Hình ảnh dự án']}" />
+                                src="${t}" />
                             <div class="main"
-                                data-img-url="${t['Hình ảnh dự án']}">
+                                data-img-url="${t}">
                             </div>
                         </a>
                     </div>
@@ -341,57 +323,27 @@ async function Loadcontent(id) {
         })
         return items
     }
-    function loadCourseIp(data) {
-        let items = ''
-        data.forEach(t => {
-            if (t['Tên khóa học'] != '') {
-                items += (
-                    `<li class="wow fadeInLeft" data-wow-duration="1s">
-                    <div class="list_inner tilt-effect">
-                        <span class="icon">
-                            <img class="back" src="${t['Huy hiệu']}" alt />
-                        </span>
-                        <div class="title">
-                            <h3>${t['Tên khóa học']}</h3>
-                            <span class="price">Trạng thái: <span>Hoàn thành </span></span>
-                        </div>
-                        <a class="dizme_tm_full_link" href="#"></a>
-                        <img class="popup_service_image"
-                            src="${t['Hình ảnh']}" />
-                        <div class="service_hidden_details">
-                            <div class="service_popup_informations">
-                                <div class="descriptions">
-                                    <p style="text-align: justify;">${t['Nhận xét']}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>`)
-            }
-        })
-        return items
-    }
 
     function loadVideoTt(data) {
+        console.log(data);
         let items = ''
-        data.forEach(t => {
-            if (t['Hình ảnh thuyết trình'] != '') {
-                items +=
-                    `<li class="wow fadeInUp" data-wow-duration="1s" >
-                        <div class="list_inners" data-iframe="${t['Video thuyết trình']}">
-                            <div class="image">
-                                <img src="img/thumbs/42-29.jpg" alt />
-                                <div class="main"
-                                    data-img-url="${t['Hình ảnh thuyết trình']}">
-                                </div>
-                                <div class="date">
-                                    <h3>${t['Ngày thuyết trình'].split('-')[2]}</h3>
-                                    <span>Tháng ${t['Ngày thuyết trình'].split('-')[1]}</span>
-                                </div>
-                            </div>
+        Object.keys(data).forEach(t => {
+            console.log(data[t]);
+            items +=
+                `<li class="wow fadeInUp" data-wow-duration="1s" >
+                <div class="list_inners" data-iframe="${data[t].Video}">
+                    <div class="image">
+                        <img src="img/thumbs/42-29.jpg" alt />
+                        <div class="main"
+                            data-img-url="${data[t].Img}">
                         </div>
-                    </li>`
-            }
+                        <div class="date">
+                            <h3>${t.slice(-2)}</h3>
+                            <span>Tháng ${t.slice(5, 7)}</span>
+                        </div>
+                    </div>
+                </div>
+            </li>`
         })
         return items
     }
@@ -476,3 +428,8 @@ async function Loadcontent(id) {
     new WOW().init(); $('.portfolio_list').waitForImages().done(function () { $('.grid').masonry({ itemSelector: '.grid-item', }); });
 
 }
+
+
+
+
+
