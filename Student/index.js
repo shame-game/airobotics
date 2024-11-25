@@ -23,7 +23,7 @@ let studentId = currentURL.searchParams.get('ID')
 Loadcontent(studentId)
 
 async function Loadcontent(id) {
-    let data = await fetch(`http://localhost:3000/api/Student_PF/getPF_web?ID=${id}`)
+    let data = await fetch(`https://system.airobotic.edu.vn/api/Student_PF/getPF_web?ID=${id}`)
     data = await data.json()
     document.querySelector('meta[property="og:image"]').setAttribute('content', data.data.Avatar)
     document.querySelector('meta[property="og:title"]').setAttribute('content', `Hồ sơ điện tử của học viên ${data.name}`)
