@@ -1859,7 +1859,8 @@ h6 {
     width: 100%;
     float: left;
     position: relative;
-    margin-bottom: 37px
+    margin-bottom: 37px;
+    aspect-ratio: 16/10;
 }
 
 .dizme_tm_modalbox .service_popup_informations .image img {
