@@ -28,7 +28,7 @@ async function Loadcontent(id) {
     document.querySelector('meta[property="og:image"]').setAttribute('content', data.data.Avatar)
     document.querySelector('meta[property="og:title"]').setAttribute('content', `Hồ sơ điện tử của học viên ${data.name}`)
     document.querySelector('meta[property="og:description"]').setAttribute('content', `Hồ sơ điện tử của học viên ${data.name}`)
-    
+
     document.querySelector('#LoadID').innerHTML = (
         `<div class="dizme_tm_mobile_menu">
                 <div class="mobile_menu_inner">
@@ -136,15 +136,15 @@ async function Loadcontent(id) {
                                     <img src="${data.data.Avatar}" />
                                     <div class="numbers year">
                                         <div class="wrapper">
-                                            <h3><span class="dizme_tm_counter" data-from="00" data-to="${Object.keys(data.course).length}"
-                                                    data-speed="2000">${Object.keys(data.course).length}</span></h3>
+                                            <h3><span class="dizme_tm_counter" data-from="00" data-to="${data.course ? Object.keys(data.course).length : 0}"
+                                                    data-speed="2000">${data.course ? Object.keys(data.course).length : null}</span></h3>
                                             <span class="name">Khóa học<br />tham gia</span>
                                         </div>
                                     </div>
                                     <div class="numbers project">
                                         <div class="wrapper">
-                                            <h3><span class="dizme_tm_counter" data-from="0" data-to="${Object.keys(data.course).length * 7}"
-                                                    data-speed="2000">${Object.keys(data.course).length * 7}</span></h3>
+                                            <h3><span class="dizme_tm_counter" data-from="0" data-to="${data.course ? Object.keys(data.course).length * 7 : 0}"
+                                                    data-speed="2000">${data.course ? Object.keys(data.course).length * 7 : null}</span></h3>
                                             <span class="name">Dự án<br />thực hiện</span>
                                         </div>
                                     </div>
@@ -227,10 +227,10 @@ async function Loadcontent(id) {
                         </div>
                         <div class="service_list">
                             <ul>
-                            ${Object.keys(data.course).map((key) => {
-                                let item = 'Hoàn thành'
-                                if(!data.course[key].StatusLearn) return null
-                                
+                            ${data.course ? Object.keys(data.course).map((key) => {
+            let item = 'Hoàn thành'
+            if (!data.course[key].StatusLearn) return null
+
             return `<li class="wow fadeInLeft" data-wow-duration="1s">
                     <div class="list_inner tilt-effect">
                         <span class="icon">
@@ -252,7 +252,7 @@ async function Loadcontent(id) {
                         </div>
                     </div>
                 </li>`
-        }).join('')}
+        }).join('') : null}
                             </ul>
                         </div>
                     </div>
