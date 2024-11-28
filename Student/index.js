@@ -28,7 +28,7 @@ async function Loadcontent(id) {
     document.querySelector('meta[property="og:image"]').setAttribute('content', data.data.Avatar)
     document.querySelector('meta[property="og:title"]').setAttribute('content', `Hồ sơ điện tử của học viên ${data.name}`)
     document.querySelector('meta[property="og:description"]').setAttribute('content', `Hồ sơ điện tử của học viên ${data.name}`)
-
+    
     document.querySelector('#LoadID').innerHTML = (
         `<div class="dizme_tm_mobile_menu">
                 <div class="mobile_menu_inner">
@@ -228,6 +228,9 @@ async function Loadcontent(id) {
                         <div class="service_list">
                             <ul>
                             ${Object.keys(data.course).map((key) => {
+                                let item = 'Hoàn thành'
+                                if(!data.course[key].StatusLearn) return null
+                                
             return `<li class="wow fadeInLeft" data-wow-duration="1s">
                     <div class="list_inner tilt-effect">
                         <span class="icon">
@@ -235,7 +238,7 @@ async function Loadcontent(id) {
                         </span>
                         <div class="title">
                             <h3>${key}</h3>
-                            <span class="price">Trạng thái: <span>Hoàn thành </span></span>
+                            <span class="price">Trạng thái: <span>${item} </span></span>
                         </div>
                         <a class="dizme_tm_full_link" href="#"></a>
                         <img class="popup_service_image"
@@ -325,8 +328,8 @@ async function Loadcontent(id) {
     }
 
     function loadVideoTt(data) {
-        console.log(data);
         let items = ''
+        if (!data) return ''
         Object.keys(data).forEach(t => {
             console.log(data[t]);
             items +=
