@@ -137,14 +137,14 @@ async function Loadcontent(id) {
                                     <div class="numbers year">
                                         <div class="wrapper">
                                             <h3><span class="dizme_tm_counter" data-from="00" data-to="${data.course ? Object.keys(data.course).length : 0}"
-                                                    data-speed="2000">${data.course ? Object.keys(data.course).length : null}</span></h3>
+                                                    data-speed="2000">${data.course ? Object.keys(data.course).length : 0}</span></h3>
                                             <span class="name">Khóa học<br />tham gia</span>
                                         </div>
                                     </div>
                                     <div class="numbers project">
                                         <div class="wrapper">
                                             <h3><span class="dizme_tm_counter" data-from="0" data-to="${data.course ? Object.keys(data.course).length * 7 : 0}"
-                                                    data-speed="2000">${data.course ? Object.keys(data.course).length * 7 : null}</span></h3>
+                                                    data-speed="2000">${data.course ? Object.keys(data.course).length * 7 : 0}</span></h3>
                                             <span class="name">Dự án<br />thực hiện</span>
                                         </div>
                                     </div>
