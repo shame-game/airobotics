@@ -1,4 +1,3 @@
-let url = '1cuhLv5O7043CjbIHAeBBXvnLIJzv1USA1wpjHedWeRg'
 let currentURL = new URL(window.location.href);
 let rootURL = window.location.protocol + "//" + window.location.host
 const colorSkill = ['#f75023', '#1cbe59', '#8067f0', '#23ebf7', '#e4e223', '#2f5cd1']
