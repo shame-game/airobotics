@@ -23,7 +23,7 @@ Loadcontent(studentId)
 
 
 async function Loadcontent(id) {
-    let data = await fetch(`http://localhost:3000/api/student/${id}/profile`)
+    let data = await fetch(`https://sys.airobotic.edu.vn/api/student/${id}/profile`)
     data = await data.json()
     data = data.data
     console.log(data);
