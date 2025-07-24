@@ -1157,7 +1157,9 @@ h6 {
 
 .dizme_tm_portfolio .portfolio_list .inner img {
     min-width: 100%;
-    opacity: 0
+    opacity: 0;
+    object-fit: cover;
+    aspect-ratio: 16/12;
 }
 
 .dizme_tm_portfolio .portfolio_list .main {

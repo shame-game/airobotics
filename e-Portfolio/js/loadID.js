@@ -19,7 +19,6 @@ const lv = {
     AE2: 15
 }
 let studentId = currentURL.searchParams.get('ID')
-console.log(studentId);
 Loadcontent(studentId)
 
 
@@ -108,7 +107,7 @@ async function Loadcontent(id) {
                             </div>
                             <div class="avatar">
                                 <div class="image">
-                                    <img src="${data.profile['Avatar']}" alt />
+                                    <img src="https://lh3.googleusercontent.com/d/${data.profile['Avatar']}" alt />
                                 </div>
                             </div>
                         </div>
@@ -134,7 +133,7 @@ async function Loadcontent(id) {
                         <div class="wrapper">
                             <div class="left">
                                 <div class="image">
-                                    <img src="${data.profile['Avatar']}" />
+                                    <img src="https://lh3.googleusercontent.com/d/${data.profile['Avatar']}" />
                                     <div class="numbers year">
                                         <div class="wrapper">
                                             <h3><span class="dizme_tm_counter" data-from="00" data-to="${data.profile.Present.length}"
@@ -197,54 +196,54 @@ async function Loadcontent(id) {
                                     <h3>6 Kĩ năng của học sinh trong quá trình học</h3>
                                 </div>
                                 <div class="dodo_progress wow fadeInUp" data-wow-duration="1s">
-                                    <div class="progress_inner" data-value="${data.profile['Diễn giải vấn đề']}" data-color="#f75023">
+                                    <div class="progress_inner" data-value="${data.profile.Skill['Diễn giải vấn đề']}" data-color="#f75023">
                                         <span><span class="label">Diễn giải vấn đề</span><span
-                                                class="number">${data.profile['Diễn giải vấn đề']}%</span></span>
+                                                class="number">${data.profile.Skill['Diễn giải vấn đề']}%</span></span>
                                         <div class="background">
                                             <div class="bar">
                                                 <div class="bar_in"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="progress_inner" data-value="${data.profile['Giao lưu hợp tác']}" data-color="#1cbe59">
+                                    <div class="progress_inner" data-value="${data.profile.Skill['Giao lưu hợp tác']}" data-color="#1cbe59">
                                         <span><span class="label">Giao lưu hợp tác</span><span
-                                                class="number">${data.profile['Giao lưu hợp tác']}%</span></span>
+                                                class="number">${data.profile.Skill['Giao lưu hợp tác']}%</span></span>
                                         <div class="background">
                                             <div class="bar">
                                                 <div class="bar_in"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="progress_inner" data-value="${data.profile['Kỹ năng giao tiếp']}" data-color="#8067f0">
+                                    <div class="progress_inner" data-value="${data.profile.Skill['Kỹ năng giao tiếp']}" data-color="#8067f0">
                                         <span><span class="label">Kỹ năng giao tiếp</span><span
-                                                class="number">${data.profile['Kỹ năng giao tiếp']}%</span></span>
+                                                class="number">${data.profile.Skill['Kỹ năng giao tiếp']}%</span></span>
                                         <div class="background">
                                             <div class="bar">
                                                 <div class="bar_in"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="progress_inner" data-value="${data.profile['Sự tiến bộ và Phát triển']}" data-color="#23ebf7">
+                                    <div class="progress_inner" data-value="${data.profile.Skill['Sự tiến bộ và Phát triển']}" data-color="#23ebf7">
                                         <span><span class="label">Sự tiến bộ và Phát triển</span><span
-                                                class="number">${data.profile['Sự tiến bộ và Phát triển']}%</span></span>
+                                                class="number">${data.profile.Skill['Sự tiến bộ và Phát triển']}%</span></span>
                                         <div class="background">
                                             <div class="bar">
                                                 <div class="bar_in"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="progress_inner" data-value="${data.profile['Tự tin năng động']}" data-color="#e0de3a">
+                                    <div class="progress_inner" data-value="${data.profile.Skill['Tự tin năng động']}" data-color="#e0de3a">
                                         <span><span class="label">Tự tin năng động</span><span
-                                                class="number">${data.profile['Tự tin năng động']}%</span></span>
+                                                class="number">${data.profile.Skill['Tự tin năng động']}%</span></span>
                                         <div class="background">
                                             <div class="bar">
                                                 <div class="bar_in"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="progress_inner" data-value="${data.profile['Đổi mới sáng tạo']}" data-color="#0249ff">
+                                    <div class="progress_inner" data-value="${data.profile.Skill['Đổi mới sáng tạo']}" data-color="#0249ff">
                                         <span><span class="label">Đổi mới sáng tạo</span><span
-                                                class="number">${data.profile['Đổi mới sáng tạo']}%</span></span>
+                                                class="number">${data.profile.Skill['Đổi mới sáng tạo']}%</span></span>
                                         <div class="background">
                                             <div class="bar">
                                                 <div class="bar_in"></div>
@@ -254,7 +253,7 @@ async function Loadcontent(id) {
                                 </div>
                             </div>
                             <div class="right">
-                                <img src="${data.profile.ImgSkill}" alt />
+                                <img src="https://lh3.googleusercontent.com/d/${data.profile.ImgSkill}" alt />
                             </div>
                         </div>
                     </div>
@@ -270,7 +269,7 @@ async function Loadcontent(id) {
                             <h3>Các khóa học đã tham gia</h3>
                         </div>
                         <div class="service_list">
-                            <ul>${loadCourseIp(data.course)}</ul>
+                            <ul>${loadCourseIp(data.profile.Present, data.course)}</ul>
                         </div>
                     </div>
                     <div class="brush_1 wow fadeInLeft" data-wow-duration="1s"><img src="img/brushes/service/5.png" alt />
@@ -287,7 +286,7 @@ async function Loadcontent(id) {
                             <h3>Dưới đây là một trong các video thuyết trình của học sinh trong suốt quá trình học tập</h3>
                         </div>
                         <div class="news_list">
-                            <ul>${loadVideoTt(data)}</ul>
+                            <ul>${loadVideoTt(data.profile.Present, data.course)}</ul>
                         </div>
                     </div>
                     <div class="brush_1 wow zoomIn" data-wow-duration="1s"><img src="img/brushes/news/1.png" alt /></div>
@@ -343,29 +342,33 @@ async function Loadcontent(id) {
         })
         return items
     }
-    function loadCourseIp(data) {
+    function loadCourseIp(data, course) {
+
         if (data.length == 0 || !data) return
         let items = ''
         data.forEach((t, index) => {
-            console.log(t.course.Book.Name);
+            let img = course.filter(c => c.course.Book.ID == t.bookId)[0]
+            console.log(img);
+            
+            img = img.course.Book.Image
 
             items += (
                 `<li class="wow fadeInLeft" data-wow-duration="1s">
                     <div class="list_inner tilt-effect">
                         <span class="icon">
-                            <img class="back" src="https://airobotic.edu.vn/staric/Image/LV${t.course.Book.ID}.png" alt />
+                            <img class="back" src="${img}" alt />
                         </span>
                         <div class="title">
-                            <h3>${t.course.Book.Name}</h3>
+                            <h3>${t.bookName}</h3>
                             <span class="price">Trạng thái: <span>Hoàn thành </span></span>
                         </div>
                         <a class="dizme_tm_full_link" href="#"></a>
                         <img class="popup_service_image"
-                            src="${data.profile.ImgPJ[0] || data.profile.Avatar}" />
+                            src="https://lh3.googleusercontent.com/d/${t.Img}" />
                         <div class="service_hidden_details">
                             <div class="service_popup_informations">
                                 <div class="descriptions">
-                                    <p style="text-align: justify;">${t['Nhận xét']}</p>
+                                    <p style="text-align: justify;">${t.Comment}</p>
                                 </div>
                             </div>
                         </div>
@@ -379,18 +382,14 @@ async function Loadcontent(id) {
         if (data.length == 0 || !data) return
         let items = ''
         data.forEach(t => {
-            if (t['Hình ảnh thuyết trình'] != '') {
+            if (t.Video && t.Img) {
                 items +=
                     `<li class="wow fadeInUp" data-wow-duration="1s" >
-                        <div class="list_inners" data-iframe="${t['Video thuyết trình']}">
+                        <div class="list_inners" data-iframe="https://drive.google.com/file/d/${t.Video}/preview">
                             <div class="image">
                                 <img src="img/thumbs/42-29.jpg" alt />
                                 <div class="main"
-                                    data-img-url="${t['Hình ảnh thuyết trình']}">
-                                </div>
-                                <div class="date">
-                                    <h3>${t['Ngày thuyết trình'].split('-')[2]}</h3>
-                                    <span>Tháng ${t['Ngày thuyết trình'].split('-')[1]}</span>
+                                    data-img-url="https://lh3.googleusercontent.com/d/${t.Img}">
                                 </div>
                             </div>
                         </div>
