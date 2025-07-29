@@ -15,7 +15,7 @@ fetchSheet
         for (let i in rows) {
             let vietnameseString = rows[i]['Name'];
             let strWithoutDiacriticsAndWhitespace = removeVietnameseDiacriticsAndWhitespace(vietnameseString);
-            if (currentURL == `${rootURL}/e-Portfolio/?ID=${rows[i]['ID'] + strWithoutDiacriticsAndWhitespace}`) {
+            if (currentURL == `${rootURL}/Profile/?ID=${rows[i]['ID'] + strWithoutDiacriticsAndWhitespace}`) {
                 document.title = rows[i]['Name']
                 document.querySelector('meta[property="og:title"]').setAttribute('content', `Hồ sơ điện tử của học viên ${rows[i]['Name']}`)
                 document.querySelector('meta[property="og:description"]').setAttribute('content', `Hồ sơ điện tử của học viên ${rows[i]['Name']}`)
